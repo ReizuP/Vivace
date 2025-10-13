@@ -12,6 +12,10 @@ $html = <<<HTML
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
+      <form class="d-flex" action="search.php" method="GET">
+            <input class="form-control me-2" type="search" name="search_query" placeholder="Search products..." aria-label="Search">
+            <button class="btn btn-outline-light" type="submit">Search</button>
+        </form>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">

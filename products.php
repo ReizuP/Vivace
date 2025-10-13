@@ -1,3 +1,8 @@
+<?php
+  session_start();
+  include "misc/database.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -91,12 +96,14 @@
   <section class="py-5">
     <div class="container">
       <div class="row g-4" id="products-grid">
-        <!-- Products will be loaded here -->
+        <?php 
+          include "misc/cards_handler.php";
+          allProducts();
+        ?>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
   <!-- FOOTER AND MODALS -->
    <?php
 

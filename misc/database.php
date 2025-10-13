@@ -1,14 +1,17 @@
 <?php
-$servername = "localhost";
-$username = "root";    //input your username here
-$password = "root";    //input your password here
-$dbname = "vivace_db";
+    #Uncomment your credentials if needed.
+    #$db_server = "localhost:3306"; //nova
+    $db_server = "localhost";
+    $db_user = "root";
+    
+    $db_pass = 'root'; //reizu
+    $db_name = 'vivace_db'; //reizu
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
+    #$db_pass = 'paulo'; //nova 
+    #$db_name = "testPHP"; //nova
+    $conn = "";
 
-// Check connection
-try {
+    try {
         $conn = mysqli_connect($db_server, $db_user, $db_pass, $db_name);
     } catch (mysqli_sql_exception) {
         echo "Database is offline! (MariaDB) <br>";

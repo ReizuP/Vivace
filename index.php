@@ -73,6 +73,10 @@
       <h2 class="text-center mb-5">Featured Products</h2>
       <div class="row g-4" id="featured-products">
         <!-- Products will be loaded here -->
+        <?php 
+          include "misc/cards_handler.php";
+          featuredProducts();
+        ?>
       </div>
     </div>
   </section>
