@@ -112,7 +112,7 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
+  <!-- FOOTER AND MODALS -->
    <?php
 
       footer();

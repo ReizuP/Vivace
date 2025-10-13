@@ -9,17 +9,16 @@
   <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
   <!-- Your custom styles -->
   <link rel="stylesheet" href="styles.css">
-
-  <!-- jQuery & Validation (local) -->
-  <script src="node_modules/jquery/dist/jquery.min.js"></script>
-  <script src="node_modules/jquery-validation/dist/jquery.validate.min.js"></script>
-
-  <!-- Your custom modal script -->
-  <script src="modals.js"></script>
+</head>
 <body>
 
   <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <?php
+      include "misc/readypage.php";
+
+      navbar();
+      ?>
+  <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
       <a class="navbar-brand" href="index.php">
         <i class="fas fa-store"></i> E-Shop
@@ -30,10 +29,10 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link" href="index.php">Home</a>
+            <a class="nav-link active" href="index.php">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="products.php">Products</a>
+            <a class="nav-link" href="products.php">Products</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="about.php">About</a>
@@ -42,8 +41,8 @@
             <a class="nav-link" href="contact.php">Contact</a>
           </li>
           <li class="nav-item">
-            <button class="nav-link btn btn-link text-white" data-bs-toggle="modal" data-bs-target="#loginModal">
-              <i class="fas fa-sign-in-alt"></i> Login
+            <button class="nav-link btn btn-link text-white" id="loginBtn">
+              <i class="fas fa-sign-in-alt">Login</i>
             </button>
           </li>
           <li class="nav-item">
@@ -55,7 +54,7 @@
         </ul>
       </div>
     </div>
-  </nav>
+  </nav> -->
 
   <!-- PAGE HEADER -->
   <div class="bg-primary text-white py-4">
@@ -98,7 +97,13 @@
   </section>
 
   <!-- FOOTER -->
-  <footer class="bg-dark text-white text-center py-4">
+  <!-- FOOTER AND MODALS -->
+   <?php
+
+      footer();
+      modals();
+      ?>
+  <!-- <footer class="bg-dark text-white text-center py-4">
     <div class="container">
       <div class="row">
         <div class="col-md-6">
@@ -115,14 +120,51 @@
       <hr>
       <p class="mb-0">&copy; 2025 E-Shop | Designed for demo purposes</p>
     </div>
-  </footer>
+  </footer> -->
 
-  <!-- jQuery and jQuery Validator -->
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
-  
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="js/app.js"></script>
+  <!-- Login Modal -->
+  <!-- <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="loginModalLabel">Login</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="loginForm" novalidate>
+            <div class="mb-3">
+              <label for="loginEmail" class="form-label">Email</label>
+              <input type="email" class="form-control" id="loginEmail" name="loginEmail" required>
+              <div class="invalid-feedback"></div>
+            </div>
+            <div class="mb-3">
+              <label for="loginPassword" class="form-label">Password</label>
+              <div class="input-group">
+                <input type="password" class="form-control" id="loginPassword" name="loginPassword" required>
+                <button class="btn btn-outline-secondary" type="button" id="toggleLoginPassword">
+                  <i class="fas fa-eye" id="loginPasswordIcon"></i>
+                </button>
+              </div>
+              <div class="invalid-feedback"></div>
+            </div>
+            <div class="d-grid">
+              <button type="submit" class="btn btn-primary">
+                <i class="fas fa-sign-in-alt"></i> Login
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <p class="mb-0">No account yet? <a href="signup.php" class="text-primary" data-bs-dismiss="modal">Sign up here</a></p>
+        </div>
+      </div>
+    </div>
+  </div> -->
+  <!-- jQuery & Validation (local) -->
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="node_modules/jquery-validation/dist/jquery.validate.min.js"></script>
+
+  <!-- Your custom modal script -->
+  <script src="modals.js"></script>
 </body>
 </html>

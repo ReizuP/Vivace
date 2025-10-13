@@ -6,21 +6,21 @@
   <title>About Us - E-Shop</title>
   <link href="./styles.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link href="./styles.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
   <!-- Your custom styles -->
   <link rel="stylesheet" href="styles.css">
-
-  <!-- jQuery & Validation (local) -->
-  <script src="node_modules/jquery/dist/jquery.min.js"></script>
-  <script src="node_modules/jquery-validation/dist/jquery.validate.min.js"></script>
-
-  <!-- Your custom modal script -->
-  <script src="modals.js"></script>
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+   <!-- NAVBAR -->
+    <?php
+      include "misc/readypage.php";
+
+      navbar();
+      ?>
+  <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
       <a class="navbar-brand" href="index.php">
         <i class="fas fa-store"></i> E-Shop
@@ -51,7 +51,7 @@
         </ul>
       </div>
     </div>
-  </nav>
+  </nav> -->
 
   <!-- PAGE HEADER -->
   <div class="bg-primary text-white py-5">
@@ -108,8 +108,13 @@
     </div>
   </div>
 
-  <!-- FOOTER -->
-  <footer class="bg-dark text-white text-center py-4">
+  <!-- FOOTER AND MODALS -->
+   <?php
+
+      footer();
+      modals();
+      ?>
+  <!-- <footer class="bg-dark text-white text-center py-4">
     <div class="container">
       <div class="row">
         <div class="col-md-6">
@@ -126,10 +131,13 @@
       <hr>
       <p class="mb-0">&copy; 2025 E-Shop | Designed for demo purposes</p>
     </div>
-  </footer>
+  </footer> -->
 
-  <!-- Bootstrap JS -->
-  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="js/app.js"></script>
+  <!-- jQuery & Validation (local) -->
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="node_modules/jquery-validation/dist/jquery.validate.min.js"></script>
+
+  <!-- Your custom modal script -->
+  <script src="modals.js"></script>
 </body>
 </html>
