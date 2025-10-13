@@ -6,13 +6,23 @@
   <title>Sign Up - E-Shop</title>
   <link href="./styles.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <!-- Your custom styles -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- jQuery & Validation (local) -->
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="node_modules/jquery-validation/dist/jquery.validate.min.js"></script>
+
+  <!-- Your custom modal script -->
+  <script src="modals.js"></script>
 </head>
 <body>
 
   <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-      <a class="navbar-brand" href="index.html">
+      <a class="navbar-brand" href="index.php">
         <i class="fas fa-store"></i> E-Shop
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -21,16 +31,16 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link" href="index.php">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="products.html">Products</a>
+            <a class="nav-link" href="products.php">Products</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="about.html">About</a>
+            <a class="nav-link" href="about.php">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact</a>
+            <a class="nav-link" href="contact.php">Contact</a>
           </li>
           <li class="nav-item">
             <button class="nav-link btn btn-link text-white" data-bs-toggle="modal" data-bs-target="#loginModal">
@@ -38,8 +48,8 @@
             </button>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="cart.html">
-              <i class="fas fa-shopping-cart"></i> Cart 
+            <a class="nav-link" href="cart.php">
+              <i class="fas fa-shopping-cart">Cart</i>
               <span class="badge bg-primary" id="cart-count">0</span>
             </a>
           </li>
