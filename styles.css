@@ -1,1 +1,105 @@
 @import "./node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+/* === Modal Styling === */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+  display: none; /* hidden by default */
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeInBg 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.modal-box {
+  background: #fff;
+  padding: 2rem 1.5rem;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  animation: fadeInUp 0.25s ease-in-out;
+  position: relative;
+}
+
+.modal-box h2 {
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+  color: #333;
+}
+
+.modal-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-top: 0.5rem;
+}
+
+.modal-box input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.modal-box input:focus {
+  border-color: #007bff;
+}
+
+.modal-box button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 0.4rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.modal-box button:hover {
+  background-color: #0056b3;
+}
+
+.modal-box p {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.modal-box a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.modal-box a:hover {
+  text-decoration: underline;
+}
+
+label.error {
+  color: #e63946;       /* red color */
+  font-size: 0.85rem;   /* smaller text */
+  margin-top: 4px;
+  display: block;
+  text-align: left;     /* align under the input field */
+  font-weight: 500;
+}
+
+input.error {
+  border: 1px solid #e63946;
+  background-color: #fff5f5; /* very light red background */
+}

@@ -9,18 +9,16 @@
   <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
   <!-- Your custom styles -->
   <link rel="stylesheet" href="styles.css">
-
-  <!-- jQuery & Validation (local) -->
-  <script src="node_modules/jquery/dist/jquery.min.js"></script>
-  <script src="node_modules/jquery-validation/dist/jquery.validate.min.js"></script>
-
-  <!-- Your custom modal script -->
-  <script src="modals.js"></script>
 </head>
 <body>
 
   <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <?php
+      include "misc/readypage.php";
+
+      navbar();
+      ?>
+  <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
       <a class="navbar-brand" href="index.php">
         <i class="fas fa-store"></i> E-Shop
@@ -43,8 +41,8 @@
             <a class="nav-link" href="contact.php">Contact</a>
           </li>
           <li class="nav-item">
-            <button class="nav-link btn btn-link text-white" data-bs-toggle="modal" data-bs-target="#loginModal">
-              <i class="fas fa-sign-in-alt"></i> Login
+            <button class="nav-link btn btn-link text-white" id="loginBtn">
+              <i class="fas fa-sign-in-alt">Login</i>
             </button>
           </li>
           <li class="nav-item">
@@ -56,14 +54,14 @@
         </ul>
       </div>
     </div>
-  </nav>
+  </nav> -->
 
   <!-- HERO -->
   <header class="text-center text-white py-5 bg-dark" style="background:url('https://picsum.photos/1200/400?business') center/cover no-repeat;">
     <div class="container">
       <h1 class="display-4">Welcome to E-Shop</h1>
       <p class="lead">Discover premium products for your business and lifestyle</p>
-      <a href="products.html" class="btn btn-primary btn-lg mt-3">
+      <a href="products.php" class="btn btn-primary btn-lg mt-3">
         <i class="fas fa-shopping-bag"></i> Shop Now
       </a>
     </div>
@@ -115,7 +113,12 @@
   </section>
 
   <!-- FOOTER -->
-  <footer class="bg-dark text-white text-center py-4">
+   <?php
+
+      footer();
+      modals();
+      ?>
+  <!-- <footer class="bg-dark text-white text-center py-4">
     <div class="container">
       <div class="row">
         <div class="col-md-6">
@@ -132,10 +135,10 @@
       <hr>
       <p class="mb-0">&copy; 2025 E-Shop | Designed for demo purposes</p>
     </div>
-  </footer>
+  </footer> -->
 
   <!-- Login Modal -->
-  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <!-- <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -171,14 +174,13 @@
         </div>
       </div>
     </div>
-  </div>
-
-  <!-- jQuery and jQuery Validator -->
+  </div> -->
+  <!-- jQuery & Validation (local) -->
   <script src="node_modules/jquery/dist/jquery.min.js"></script>
   <script src="node_modules/jquery-validation/dist/jquery.validate.min.js"></script>
 
-  <!-- Bootstrap JS -->
-  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="js/app.js"></script>
+  <!-- Your custom modal script -->
+  <script src="modals.js"></script>
+
 </body>
 </html>
