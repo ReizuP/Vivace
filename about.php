@@ -7,7 +7,6 @@
   <link href="./styles.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
   <link href="./styles.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
   <!-- Your custom styles -->
   <link rel="stylesheet" href="styles.css">
@@ -138,6 +137,6 @@
   <script src="node_modules/jquery-validation/dist/jquery.validate.min.js"></script>
 
   <!-- Your custom modal script -->
-  <script src="modals.js"></script>
+  <script src="./js/modals.js"></script>
 </body>
 </html>

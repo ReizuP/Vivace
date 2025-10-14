@@ -14,6 +14,18 @@ include "misc/cart_handler.php";
   <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
   <!-- Your custom styles -->
   <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Remove spinner arrows from number input */
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    input[type=number] {
+      -moz-appearance: textfield; /* Firefox */
+    }
+
+  </style>
 </head>
 <body>
 
@@ -189,8 +201,10 @@ include "misc/cart_handler.php";
   <!-- jQuery & Validation (local) -->
   <script src="node_modules/jquery/dist/jquery.min.js"></script>
   <script src="node_modules/jquery-validation/dist/jquery.validate.min.js"></script>
-
+    <script src="js/cart.js"></script>
   <!-- Your custom modal script -->
-  <script src="modals.js"></script>
+  <script src="./js/modals.js"></script>
+  <!-- <script src="./js/quantity.js"></script> -->
+  
 </body>
 </html>

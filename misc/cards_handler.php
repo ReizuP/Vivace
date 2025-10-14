@@ -92,4 +92,26 @@ function featuredProducts()
 
     echo "</div></div>";
 }
+
+if (isset($_POST['action']) && $_POST['action'] === 'update_quantity') {
+    $product_id = $_POST['product_id'];
+    $quantity = $_POST['quantity'];
+    $user_id = $_SESSION['user_id'];
+
+    // Update the quantity in the database
+    $update = "UPDATE cart SET quantity = '$quantity' WHERE user_id = '$user_id' AND prod_id = '$product_id'";
+    mysqli_query($conn, $update);
+
+    // Recalculate totals
+    $query = "SELECT SUM(products.price * cart.quantity) AS subtotal FROM cart JOIN products ON cart.prod_id = products.prod_id WHERE cart.user_id = '$user_id'";
+    $result = mysqli_fetch_assoc(mysqli_query($conn, $query));
+    $subtotal = $result['subtotal'];
+    $total = $subtotal; // Add tax/shipping if needed
+
+    echo json_encode(['success' => true, 'subtotal' => $subtotal, 'total' => $total]);
+    exit;
+}
+
+
+
 ?>
