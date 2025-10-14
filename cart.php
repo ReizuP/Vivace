@@ -1,3 +1,8 @@
+<?php
+include "misc/database.php";
+include "misc/cart_handler.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -70,15 +75,18 @@
       <div class="col-lg-8">
         <div id="cart-items">
           <!-- Cart items will be loaded here -->
+           <?php
+                showCart();
+            ?>
         </div>
-        <div id="empty-cart" class="text-center py-5">
+        <!-- <div id="empty-cart" class="text-center py-5">
           <i class="fas fa-shopping-cart fa-5x text-muted mb-4"></i>
           <h3>Cart is empty.</h3>
           <p class="text-muted">Add some products to get started!</p>
           <a href="products.html" class="btn btn-primary">
             <i class="fas fa-shopping-bag"></i> Continue Shopping
           </a>
-        </div>
+        </div> -->
       </div>
       <div class="col-lg-4">
         <div class="card">

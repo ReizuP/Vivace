@@ -1,6 +1,6 @@
 <?php
 
-include_once "database.php";
+require_once "database.php";
 
 
 $sql1 = "SELECT COUNT(*) as total from products";

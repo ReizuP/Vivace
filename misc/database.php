@@ -1,14 +1,9 @@
 <?php
-    #Uncomment your credentials if needed.
-    #$db_server = "localhost:3306"; //nova
     $db_server = "localhost";
     $db_user = "root";
     
     $db_pass = 'root'; //reizu
     $db_name = 'vivace_db'; //reizu
-
-    #$db_pass = 'paulo'; //nova 
-    #$db_name = "testPHP"; //nova
     $conn = "";
 
     try {
