@@ -1,3 +1,5 @@
+//  === MODAL FUNCTIONS ===
+
 $(function () {
   // === Open Login Modal ===
   $("#loginBtn").on("click", function () {
