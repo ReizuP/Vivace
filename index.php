@@ -57,7 +57,7 @@
   </nav> -->
 
   <!-- HERO -->
-  <header class="text-center text-white py-5 bg-dark" style="background:url('https://picsum.photos/1200/400?business') center/cover no-repeat;">
+  <header class="text-center text-white py-5 bg-dark" style="background:url(img/bannernotext.png) center/cover no-repeat;">
     <div class="container">
       <h1 class="display-4" id="display-home">VIVACE</h1>
       <p class="lead">Discover premium instruments for your business and hobbies</p>

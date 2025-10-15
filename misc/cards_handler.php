@@ -1,6 +1,6 @@
 <?php
 
-require_once "database.php";
+include "database.php";
 
 
 $sql1 = "SELECT COUNT(*) as total from products";
@@ -34,9 +34,8 @@ global $total_amount_products, $conn;
                 <div class="col-md-4 mb-4">
                 <div class="card h-100 shadow-sm">
                     <!-- Placeholder product image -->
-                    <img src="img/products/{$img}.jpg"
-                        class="img-zoom-limit"
-                        alt="{$prod_name}">
+                    <img src="img/{$img}" alt="{$prod_name}" class="img-zoom-limit">
+
 
                     <div class="card-body d-flex flex-column">
                         <h5 class="fw-bold fs-3" id="prod-name">{$prod_name}</h5>

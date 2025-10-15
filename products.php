@@ -62,12 +62,11 @@
   </nav> -->
 
   <!-- PAGE HEADER -->
-  <div class="bg-primary text-white py-4">
+   <br>
     <div class="container">
       <h1 class="display-5">Our Products</h1>
       <p class="lead">Discover our amazing collection of products</p>
     </div>
-  </div>
 
   <!-- FILTERS -->
   <div class="container py-4">
