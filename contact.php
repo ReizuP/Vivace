@@ -54,7 +54,7 @@
   <!-- PAGE HEADER -->
   <div class="bg-primary text-white py-5">
     <div class="container">
-      <h1 class="display-4">Contact Us</h1>
+      <h1 class="display-4">Contact VIVACE</h1>
       <p class="lead">We'd love to hear from you. Send us a message!</p>
     </div>
   </div>
@@ -65,7 +65,7 @@
       <div class="col-lg-8">
         <div class="card">
           <div class="card-header">
-            <h5 class="mb-0">Send us a Message</h5>
+            <h5 class="mb-0"id="contact-header">Send us a Message</h5>
           </div>
           <div class="card-body">
             <form id="contact-form" novalidate>
@@ -106,28 +106,28 @@
       <div class="col-lg-4">
         <div class="card mb-4">
           <div class="card-header">
-            <h5 class="mb-0">Contact Information</h5>
+            <h5 class="mb-0" id="contact-header">Contact Information</h5>
           </div>
           <div class="card-body">
             <div class="mb-3">
               <i class="fas fa-map-marker-alt text-primary me-2"></i>
-              <strong>Address:</strong><br>
+              <strong id="contact-content">Address:</strong><br>
               123 Business Street<br>
               City, State 12345
             </div>
             <div class="mb-3">
               <i class="fas fa-phone text-primary me-2"></i>
-              <strong>Phone:</strong><br>
+              <strong id="contact-content">Phone:</strong><br>
               (555) 123-4567
             </div>
             <div class="mb-3">
               <i class="fas fa-envelope text-primary me-2"></i>
-              <strong>Email:</strong><br>
+              <strong id="contact-content">Email:</strong><br>
               info@eshop.com
             </div>
             <div class="mb-3">
               <i class="fas fa-clock text-primary me-2"></i>
-              <strong>Business Hours:</strong><br>
+              <strong id="contact-content">Business Hours:</strong><br>
               Mon-Fri: 9AM-6PM<br>
               Sat: 10AM-4PM<br>
               Sun: Closed
@@ -137,7 +137,7 @@
 
         <div class="card">
           <div class="card-header">
-            <h5 class="mb-0">Follow Us</h5>
+            <h5 class="mb-0" id="contact-header">Follow Us</h5>
           </div>
           <div class="card-body text-center">
             <a href="#" class="btn btn-outline-primary me-2 mb-2">

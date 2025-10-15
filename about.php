@@ -63,14 +63,14 @@
   <!-- ABOUT CONTENT -->
   <div class="container py-5">
     <div class="row">
-      <div class="col-lg-6">
+      <div class="col-lg-6" id="about">
         <h2>Our Story</h2>
-        <p class="lead">E-Shop was founded with a simple mission: to provide high-quality products at affordable prices with exceptional customer service.</p>
-        <p>Since our launch in 2020, we've grown from a small startup to one of the leading online retailers, serving thousands of satisfied customers worldwide.</p>
+        <p class="lead" id="about-subh">Vivace was founded with a simple mission: to provide high-quality products at affordable prices with exceptional customer service.</p>
+        <p >Since our launch in 2020, we've grown from a small startup to one of the leading online retailers, serving thousands of satisfied customers worldwide.</p>
         <p>We believe in the power of technology to make shopping more convenient, accessible, and enjoyable for everyone.</p>
       </div>
       <div class="col-lg-6">
-        <img src="https://picsum.photos/500/300?office" class="img-fluid rounded" alt="Our Office">
+        <img src="https://picsum.photos/500/300?office" class="img-fluid rounded" id="aboutpic"alt="Our Office">
       </div>
     </div>
 
@@ -80,7 +80,7 @@
       <div class="col-lg-4 text-center mb-4">
         <div class="card h-100">
           <div class="card-body">
-            <i class="fas fa-users fa-3x text-primary mb-3"></i>
+            <i class="fas fa-users fa-3x text-primary mb-3" id="card-icon"></i>
             <h5 class="card-title">Our Team</h5>
             <p class="card-text">A dedicated team of professionals committed to delivering excellence in every aspect of our business.</p>
           </div>
@@ -89,7 +89,7 @@
       <div class="col-lg-4 text-center mb-4">
         <div class="card h-100">
           <div class="card-body">
-            <i class="fas fa-award fa-3x text-primary mb-3"></i>
+            <i class="fas fa-award fa-3x text-primary mb-3" id="card-icon"></i>
             <h5 class="card-title">Quality Promise</h5>
             <p class="card-text">We carefully curate every product to ensure it meets our high standards for quality and value.</p>
           </div>
@@ -98,7 +98,7 @@
       <div class="col-lg-4 text-center mb-4">
         <div class="card h-100">
           <div class="card-body">
-            <i class="fas fa-heart fa-3x text-primary mb-3"></i>
+            <i class="fas fa-heart fa-3x text-primary mb-3" id="card-icon"></i>
             <h5 class="card-title">Customer First</h5>
             <p class="card-text">Your satisfaction is our priority. We're here to help you find exactly what you're looking for.</p>
           </div>

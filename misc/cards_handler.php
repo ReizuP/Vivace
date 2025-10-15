@@ -39,11 +39,11 @@ global $total_amount_products, $conn;
                         alt="{$prod_name}">
 
                     <div class="card-body d-flex flex-column">
-                        <h5 class="fw-bold fs-3">{$prod_name}</h5>
-                        <p class="fs-5 text-truncate">{$info}</p>
-                        <p class="fw-bold fs-5">\${$price}</p>
-                        <p class="text-muted fs-6">Stock:{$stock}</p>
-                        <a href="product.php?id={$id}" class=" btn btn-primary w-100 mt-2">View Details</a>
+                        <h5 class="fw-bold fs-3" id="prod-name">{$prod_name}</h5>
+                        <p class="fs-5 text-truncate" id="prod-info">{$info}</p>
+                        <p class="fw-bold fs-5" id="prod-price">\${$price}</p>
+                        <p class="text-muted fs-6" id="stock-name">Stock:{$stock}</p>
+                        <a href="product.php?id={$id}" class=" btn btn-primary w-100 mt-2" id="cardbtn">View Details</a>
                     </div>
                 </div>
             </div>

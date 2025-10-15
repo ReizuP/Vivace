@@ -103,3 +103,184 @@ input.error {
   border: 1px solid #e63946;
   background-color: #fff5f5; /* very light red background */
 }
+
+body {
+  background-color: #252525; /* deep dark gray (almost black) */
+  color: #f5f5f5; /* light text for contrast */
+}
+
+
+.nav-link{
+  color: #f5e8c4;
+  margin-left: 15px;
+}
+
+#navstore-icon{
+  color:#B68C55;
+}
+#navbar-cart{
+  color:#B68C55;
+}
+#cart-count{
+  background-color: #B68C55;
+  color:#fdfdfd;
+}
+#brand-name{
+  font-family: Playfair Display, serif;
+  color:#B68C55;
+}
+#display-home{
+  font-family:Playfair Display, serif;
+  font-weight: bold;
+  color:#B68C55;
+  font-size:60px;
+}
+.display-4{
+  font-family:Playfair Display, serif;
+  font-weight: bold;
+  color:#B68C55;
+}
+.display-5{
+  font-family:Playfair Display, serif;
+  color:#B68C55;
+  font-weight: bold;
+}
+
+.lead{
+  font-family:Lora, sans-serif;
+  color:white;
+  size:14px;
+}
+/*about-html*/
+#about-subh{
+  font-family:Lora, sans-serif;
+  color:#F8F4E9;
+  font-size: 18px;
+}
+#about{
+  background-color: #0a0a0a;
+  border-radius: 5px;
+  border-color:#F8F4E9;
+  border-width:2px;
+  padding:10px,10px;
+
+}
+#aboutpic{
+  background-color:#B68C55;
+  border-radius:5px;
+  border-color: #B68C55;
+  margin-left: 2%;
+  padding:2px,2px;
+
+}
+
+h2{
+  font-family:Playfair Display, serif;
+  color: #B68C55;
+  font-size: 50px;
+  padding-bottom:20px;
+}
+
+p{
+  font-family:Lora, sans-serif ;
+  font-size: 14px;
+
+}
+
+.fas{
+  color:#0a0a0a;
+}
+
+.card{
+  background-color: #0a0a0a;
+}
+.card-title{
+  font-family:Cormorant, sans-serif ;
+  font-size: large;
+  color:#eaeae8;
+  font-weight: bold;
+}
+.card-text{
+  font-family: Lora , sans-serif;
+  font-size: medium;
+  color:#f5e8c4;
+  padding-right: 5px;
+  padding-left: 5px;
+
+}
+.card-body{
+  color:#f5e8c4;
+  background-color: #101010;
+  border-color: #252525;
+}
+#card-icon{
+  color:#B68C55;
+
+}
+#cardbtn{
+  background-color:#B68C55;
+  color:#151414;
+  border-color:#b18141;
+  font-weight: bold;
+  font-family: Lora, sans-serif;
+  font-size: medium;
+  width:1vw;
+}
+
+.btn{
+  background-color:#B68C55;
+  color:#151414;
+  border-color:#b18141;
+  font-weight: bold;
+  font-family: Lora, sans-serif;
+  font-size: medium;
+}
+
+/*product-html*/
+#stock-name{
+  color:#f5f5f5;
+  margin-top:-40px;
+}
+
+#prod-name{
+  color: #F8F4E9;
+  font-size: 18px;
+  font-family:Inter, sans-serif ;
+}
+#prod-info{
+  color:#f5e8c4;
+  font-size: 5px ;
+  font-family: Inter, sans-serif;
+}
+#prod-price{
+  color:#B68C55;
+  margin-left:250px;
+  font-size: 5rem;
+}
+.form-control{
+  background-color: #252525;
+  color: #f9f8f7;
+  border-color: #333;
+}
+#search{
+  background-color: #0a0a0a;
+  color:#F8F4E9;
+  border-color: #b18141;
+}
+#search-input{
+  background-color: #0a0a0a;
+  color:#F8F4E9;
+  border-color: #b18141;
+}
+
+#contact-header{
+  color:#F8F4E9;
+}
+#contact-content{
+  color:#F8F4E9;
+}
+#category-filter{
+  background-color: #0a0a0a;
+  color:#f5e8c4;
+  border-color: #b18141;
+}

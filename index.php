@@ -59,7 +59,7 @@
   <!-- HERO -->
   <header class="text-center text-white py-5 bg-dark" style="background:url('https://picsum.photos/1200/400?business') center/cover no-repeat;">
     <div class="container">
-      <h1 class="display-4">Vivace</h1>
+      <h1 class="display-4" id="display-home">VIVACE</h1>
       <p class="lead">Discover premium instruments for your business and hobbies</p>
       <a href="products.php" class="btn btn-primary btn-lg mt-3">
         <i class="fas fa-shopping-bag"></i> Shop Now

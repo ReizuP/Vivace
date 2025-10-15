@@ -62,7 +62,7 @@
   <div class="bg-primary text-white py-5">
     <div class="container">
       <h1 class="display-4">Create Account</h1>
-      <p class="lead">Join E-Shop and start shopping today!</p>
+      <p class="lead">Join Vivace and start shopping today!</p>
     </div>
   </div>
 

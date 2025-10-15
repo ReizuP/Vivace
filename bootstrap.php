@@ -54,9 +54,9 @@
   <!-- HERO -->
   <header class="text-center text-white py-5 bg-dark" style="background:url('https://picsum.photos/1200/400?business') center/cover no-repeat;">
     <div class="container">
-      <h1 class="display-4">Welcome to E-Shop</h1>
-      <p class="lead">Discover premium products for your business and lifestyle</p>
-      <a href="products.html" class="btn btn-primary btn-lg mt-3">
+      <h1 class="display-4">Welcome to VIVACE</h1>
+      <p class="lead">Discover premium instruments for your business and lifestyle</p>
+      <a href="products.html" class="btn btn-secondary btn-lg mt-3">
         <i class="fas fa-shopping-bag"></i> Shop Now
       </a>
     </div>
@@ -65,7 +65,7 @@
   <!-- PRODUCTS -->
   <section class="py-5">
     <div class="container">
-      <h2 class="text-center mb-4">Featured Products</h2>
+      <h2 class="text-center mb-4">Featured Instruments</h2>
       <div class="row g-4" id="featured-products">
         <!-- Products will be loaded here -->
       </div>

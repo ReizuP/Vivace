@@ -103,7 +103,7 @@ include "misc/cart_handler.php";
       <div class="col-lg-4">
         <div class="card">
           <div class="card-header">
-            <h5 class="mb-0">Order Summary</h5>
+            <h5 class="mb-0"id="contact-header">Order Summary</h5>
           </div>
           <div class="card-body">
             <div class="d-flex justify-content-between mb-2">
