@@ -185,5 +185,6 @@
 
   <!-- Your custom modal script -->
   <script src="./modals.js"></script>
+  <script src="./js/loginsign.js"></script>
 </body>
 </html>

@@ -1,5 +1,8 @@
 <?php
-  session_start();
+if (session_status() === PHP_SESSION_NONE) {
+session_start();
+}
+  include "misc/cart_handler.php";
   include "misc/database.php";
 ?>
 
@@ -172,5 +175,6 @@
 
   <!-- Your custom modal script -->
   <script src="./js/modals.js"></script>
+  <script src="./js/loginsign.js"></script>
 </body>
 </html>

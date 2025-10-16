@@ -74,7 +74,7 @@ function featuredProducts()
         echo "<div class=\"col-md-4 mb-4\">
                 <div class=\"card h-100 shadow-sm\">
                     <!-- Placeholder product image -->
-                    <img src=\"img/products/{$img}.jpg\"
+                    <img src=\"img/{$img}\"
                         class=\"img-zoom-limit\"
                         alt=\"{$prod_name}\">
 

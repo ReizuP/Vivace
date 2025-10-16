@@ -1,3 +1,11 @@
+<?php
+if (session_status() === PHP_SESSION_NONE) {
+session_start();
+}
+include "misc/database.php";
+include "misc/cart_handler.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -183,7 +191,8 @@
   <script src="node_modules/jquery-validation/dist/jquery.validate.min.js"></script>
 
   <!-- Your custom modal script -->
-  <script src="./js/modals.js"></script>
+  <script src="./js/modals.js?v=2"></script>
+  <script src="./js/loginsign.js"></script>
 
 </body>
 </html>

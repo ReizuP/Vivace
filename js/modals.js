@@ -13,6 +13,48 @@ $(function () {
     }
   });
 
+  // Login form via AJAX
+  $('#loginForm').on('submit', function (e) {
+    e.preventDefault();
+    $.ajax({
+      url: 'misc/login_handler.php',
+      method: 'POST',
+      data: $(this).serialize(),
+      dataType: 'json'
+    }).done(function (res) {
+      if (res.success) {
+        // Option: show a success, then reload to apply session changes
+        alert(res.message || 'Login successful');
+        location.reload();
+      } else {
+        alert(res.message || 'Login failed');
+      }
+    }).fail(function () {
+      alert('Login request failed — try again.');
+    });
+  });
+
+  // Signup form via AJAX
+  $('#signupForm').on('submit', function (e) {
+    e.preventDefault();
+    $.ajax({
+      url: 'misc/signup_handler.php',
+      method: 'POST',
+      data: $(this).serialize(),
+      dataType: 'json'
+    }).done(function (res) {
+      if (res.success) {
+        alert(res.message || 'Account created');
+        // you can auto-login by calling the login endpoint or reload
+        location.reload();
+      } else {
+        alert(res.message || 'Signup failed');
+      }
+    }).fail(function () {
+      alert('Signup request failed — try again.');
+    });
+  });
+
   // === Switch from Login -> Sign Up ===
   $("#openSignup").on("click", function (e) {
     e.preventDefault();
@@ -43,12 +85,12 @@ $(function () {
     messages: {
       email: "Please enter a valid email address",
       password: "This field is required",
-    },
-    submitHandler: function (form) {
-      alert("Login successful (demo)");
-      form.reset();
-      $("#loginModal").fadeOut(200);
-    },
+    }
+    // submitHandler: function (form) {
+    //   alert("Login successful (demo)");
+    //   form.reset();
+    //   $("#loginModal").fadeOut(200);
+    // },
   });
 
   // === Sign Up Form Validation ===
@@ -72,11 +114,11 @@ $(function () {
       password: "Please enter at least 6 characters",
       retypePassword: "This password does not match",
     },
-    submitHandler: function (form) {
-      alert("Account created successfully (demo)");
-      form.reset();
-      $("#signupModal").fadeOut(200);
-    },
+    // submitHandler: function (form) {
+    //   alert("Account created successfully (demo)");
+    //   form.reset();
+    //   $("#signupModal").fadeOut(200);
+    // },
   });
 
   // === Restrict invalid characters for Username ===
@@ -106,9 +148,9 @@ $(function () {
       email: "Please enter a valid email!",
       messages: "Please input something!",
     },
-    submitHandler: function (form) {
-      alert("Thank you for sharing your thoughts with us!");
-      e.preventDefault();
-    },
+    // submitHandler: function (form) {
+    //   alert("Thank you for sharing your thoughts with us!");
+    //   e.preventDefault();
+    // },
   })
 });

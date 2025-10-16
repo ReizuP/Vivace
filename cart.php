@@ -1,4 +1,7 @@
 <?php
+if (session_status() === PHP_SESSION_NONE) {
+session_start();
+}
 include "misc/database.php";
 include "misc/cart_handler.php";
 ?>
@@ -126,7 +129,7 @@ include "misc/cart_handler.php";
             <button class="btn btn-success w-100 mb-2" id="checkout-btn" disabled>
               <i class="fas fa-credit-card"></i> Proceed to Checkout
             </button>
-            <a href="products.html" class="btn btn-outline-primary w-100">
+            <a href="products.php" class="btn btn-outline-primary w-100">
               <i class="fas fa-arrow-left"></i> Continue Shopping
             </a>
           </div>
@@ -204,6 +207,7 @@ include "misc/cart_handler.php";
     <script src="js/cart.js"></script>
   <!-- Your custom modal script -->
   <script src="./js/modals.js"></script>
+  <script src="./js/loginsign.js"></script>
   <!-- <script src="./js/quantity.js"></script> -->
   
 </body>

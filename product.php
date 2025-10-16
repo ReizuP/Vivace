@@ -1,4 +1,7 @@
 <?php
+if (session_status() === PHP_SESSION_NONE) {
+session_start();
+}
 include "misc/database.php";
 include "misc/prod_page.php";
 
@@ -120,6 +123,7 @@ include "misc/prod_page.php";
 
     <!-- Your custom modal script -->
   <script src="./js/modals.js"></script>
+  <script src="./js/loginsign.js"></script>
 
 </body>
 </html>

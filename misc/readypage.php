@@ -1,7 +1,11 @@
 <?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 
 function navbar()
 {
+  
 
 $html = <<<HTML
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -64,16 +68,15 @@ HTML;
 
 function modals()
 {
-
 $html = <<<HTML
     <!-- LOGIN MODAL -->
     <div id="loginModal" class="modal-overlay">
         <div class="modal-box">
             <h2>Login</h2>
             <form id="loginForm">
-            <input type="email" name="email" placeholder="Email" required>
-            <input type="password" name="password" placeholder="Password" required>
-            <button type="submit">Login</button>
+                <input type="text" name="username" placeholder="Username or Email" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <button type="submit">Login</button>
             </form>
             <p>No account yet? <a href="#" id="openSignup">Sign up here</a></p>
         </div>
@@ -84,10 +87,11 @@ $html = <<<HTML
         <div class="modal-box">
             <h2>Sign Up</h2>
             <form id="signupForm">
-            <input type="text" id="username" name="username" placeholder="Username" required>
-            <input type="password" id="password" name="password" placeholder="Password" required>
-            <input type="password" id="retypePassword" name="retypePassword" placeholder="Retype Password" required>
-            <button type="submit">Create Account</button>
+                <input type="text" id="username" name="username" placeholder="Username" required>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+                <input type="password" id="password" name="password" placeholder="Password" required>
+                <input type="password" id="retypePassword" name="retypePassword" placeholder="Retype Password" required>
+                <button type="submit">Create Account</button>
             </form>
             <p><a href="#" id="backToLogin">Back to Login</a></p>
         </div>
@@ -95,4 +99,5 @@ $html = <<<HTML
 HTML;
     echo $html;
 }
+
 ?>

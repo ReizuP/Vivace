@@ -23,7 +23,7 @@ function prodDetails ()
         <div class="row">
                 <!-- Images -->
                 <div class="col-md-6">
-                    <img src="img/products/$prodImg.jpg"
+                    <img src="img/$prodImg.jpg"
                         alt="$prodName"
                         class="product-img-main mb-3">
                 </div>
