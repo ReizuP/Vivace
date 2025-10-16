@@ -34,15 +34,15 @@ global $total_amount_products, $conn;
                 <div class="col-md-4 mb-4">
                 <div class="card h-100 shadow-sm">
                     <!-- Placeholder product image -->
-                    <img src="img/{$img}" alt="{$prod_name}" class="img-zoom-limit">
+                    <img src="img/{$img}" alt="{$prod_name}" class="img-zoom-limit" id="prod-images">
 
 
-                    <div class="card-body d-flex flex-column">
+                    <div class="card-body d-flex flex-column" >
                         <h5 class="fw-bold fs-3" id="prod-name">{$prod_name}</h5>
                         <p class="fs-5 text-truncate" id="prod-info">{$info}</p>
                         <p class="fw-bold fs-5" id="prod-price">\${$price}</p>
                         <p class="text-muted fs-6" id="stock-name">Stock:{$stock}</p>
-                        <a href="product.php?id={$id}" class=" btn btn-primary w-100 mt-2" id="cardbtn">View Details</a>
+                        <a href="product.php?id={$id}" class=" btn btn-primary w-75 mt-2" id="cardbtn">View Details</a>
                     </div>
                 </div>
             </div>

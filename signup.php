@@ -72,7 +72,7 @@
       <div class="col-lg-6">
         <div class="card">
           <div class="card-header">
-            <h5 class="mb-0">Sign Up</h5>
+            <h5 class="mb-0" id="signupmodallabel">Sign Up</h5>
           </div>
           <div class="card-body">
             <form id="signupForm" novalidate>
@@ -157,7 +157,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6">
-          <h5>E-Shop</h5>
+          <h5>VIVACE</h5>
           <p>Your trusted online shopping destination</p>
         </div>
         <div class="col-md-6">
@@ -168,7 +168,7 @@
         </div>
       </div>
       <hr>
-      <p class="mb-0">&copy; 2025 E-Shop | Designed for demo purposes</p>
+      <p class="mb-0">&copy; 2025 VIVACE | Designed for demo purposes</p>
     </div>
   </footer>
 

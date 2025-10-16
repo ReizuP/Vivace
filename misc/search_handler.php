@@ -34,7 +34,7 @@ function search()
                             <p class="fs-5 text-truncate" id="prod-info">{$info}</p>
                             <p class="fw-bold fs-5" id="prod-price">\${$price}</p>
                             <p class="text-muted fs-6" id="stock-name">Stock:{$stock}</p>
-                            <a href="product.php?id={$id}" class=" btn btn-primary w-100 mt-2">View Details</a>
+                            <a href="product.php?id={$id}" class=" btn btn-primary w-75 mt-2">View Details</a>
                         </div>
                     </div>
                 </div>

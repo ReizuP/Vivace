@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>E-Shop - Bootstrap</title>
+  <title>VIVACE - Bootstrap</title>
   <link href="./styles.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
@@ -56,7 +56,7 @@
     <div class="container">
       <h1 class="display-4">Welcome to VIVACE</h1>
       <p class="lead">Discover premium instruments for your business and lifestyle</p>
-      <a href="products.html" class="btn btn-secondary btn-lg mt-3">
+      <a href="products.html" class="btn btn-primary btn-lg mt-3">
         <i class="fas fa-shopping-bag"></i> Shop Now
       </a>
     </div>

@@ -55,7 +55,7 @@
   <!-- PAGE HEADER -->
   <div class="bg-primary text-white py-5">
     <div class="container">
-      <h1 class="display-4">About E-Shop</h1>
+      <h1 class="display-4">About VIVACE</h1>
       <p class="lead">Your trusted online shopping destination since 2020</p>
     </div>
   </div>

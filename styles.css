@@ -1,5 +1,38 @@
 @import "./node_modules/bootstrap/dist/css/bootstrap.min.css";
 
+
+:root {
+  /* Piano-inspired color palette */
+  --bs-body-bg: #1a1a1a; /* Matte Black */
+  --bs-body-color: #f5f0e8; /* Piano Ivory */
+  
+  --bs-primary: #a68a5c; /* Brass Gold */
+  --bs-primary-rgb: 166, 138, 92;
+  --bs-secondary: #3d2617; /* Mahogany */
+  --bs-secondary-rgb: 61, 38, 23;
+  
+  --bs-dark: #0a0a0a; /* Glossy Ebony */
+  --bs-light: #f5f0e8;
+  
+  --bs-border-color: #262626;
+  --bs-border-color-translucent: rgba(255, 255, 255, 0.1);
+  
+  /* Custom colors */
+  --color-card: #0a0a0a;
+  --color-muted: #262626;
+  --color-muted-foreground: #b8a98f;
+  
+  /* Custom effects */
+  --gradient-primary: linear-gradient(135deg, #a68a5c, #8a7249);
+  --gradient-hero: linear-gradient(180deg, rgba(10, 10, 10, 0.6), #1a1a1a);
+  --glow-primary: 0 0 40px rgba(166, 138, 92, 0.5);
+  --glow-secondary: 0 0 30px rgba(166, 138, 92, 0.3);
+  
+  --bs-border-radius: 0.5rem;
+  --bs-border-radius-sm: 0.25rem;
+  --bs-border-radius-lg: 0.75rem;
+}
+
 /* === Modal Styling === */
 .modal-overlay {
   position: fixed;
@@ -18,12 +51,12 @@
 }
 
 .modal-box {
-  background: #fff;
+  background: #0a0a0a;
   padding: 2rem 1.5rem;
   border-radius: 12px;
   width: 90%;
   max-width: 400px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 8px 25px rgba(166, 138, 92, 0.5);
   text-align: center;
   animation: fadeInUp 0.25s ease-in-out;
   position: relative;
@@ -31,8 +64,8 @@
 
 .modal-box h2 {
   margin-bottom: 1rem;
-  font-size: 1.6rem;
-  color: #333;
+  font-size: 1.8rem;
+  color:#B68C55
 }
 
 .modal-box form {
@@ -40,28 +73,31 @@
   flex-direction: column;
   gap: 0.6rem;
   margin-top: 0.5rem;
+
 }
 
 .modal-box input {
   width: 100%;
   padding: 10px 12px;
-  border: 1px solid #ccc;
+  border: 1px solid #b8a98f;
   border-radius: 6px;
   font-size: 0.95rem;
   outline: none;
   transition: border-color 0.2s ease;
+  background-color:#252525;
+  color:#F8F4E9 ;
 }
 
 .modal-box input:focus {
-  border-color: #007bff;
+  border-color:linear-gradient(135deg, #a68a5c, #8a7249);
 }
 
 .modal-box button {
   width: 100%;
   padding: 10px;
   margin-top: 0.4rem;
-  background-color: #007bff;
-  color: white;
+  background-color: #B68C55;
+  color: #101010;
   border: none;
   border-radius: 6px;
   font-size: 1rem;
@@ -71,17 +107,17 @@
 }
 
 .modal-box button:hover {
-  background-color: #0056b3;
+  background-color: 0 0 40px rgba(166, 138, 92, 0.5);
 }
 
 .modal-box p {
   margin-top: 1rem;
   font-size: 0.9rem;
-  color: #333;
+  color: #434242;
 }
 
 .modal-box a {
-  color: #007bff;
+  color: #a68a5c;
   text-decoration: none;
   font-weight: 500;
 }
@@ -97,26 +133,54 @@ label.error {
   display: block;
   text-align: left;     /* align under the input field */
   font-weight: 500;
+  font-style: oblique;
 }
 
 input.error {
-  border: 1px solid #e63946;
-  background-color: #fff5f5; /* very light red background */
+  border: 2px solid #e63946 ;
+  background-color:linear-gradient(180deg, rgba(10, 10, 10, 0.6), #1a1a1a);  
 }
 
 body {
   background-color: #252525; /* deep dark gray (almost black) */
   color: #f5f5f5; /* light text for contrast */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.navbar {
+  background-color: rgba(26, 26, 26, 0.95) !important;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--bs-border-color);
+  margin-left:15px;
+}
+.navbar-brand {
+  font-family: 'Playfair Display', serif;
+  font-weight: 900;
+  font-size: 1.75rem;
+  color: var(--bs-primary) !important;
 }
 
 
+
 .nav-link{
-  color: #f5e8c4;
+  color: var(--color-muted-foreground) !important;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  position: relative;
   margin-left: 15px;
+}
+
+.nav-link:hover{
+  text-decoration: underline;
 }
 
 #navstore-icon{
   color:#B68C55;
+}
+#navstore-icon:hover {
+  animation: glow 2s ease-in-out infinite;
 }
 #navbar-cart{
   color:#B68C55;
@@ -134,6 +198,11 @@ body {
   font-weight: bold;
   color:#B68C55;
   font-size:60px;
+}
+#display-home:hover{
+  border-color: rgba(166, 138, 92, 0.5);
+  text-shadow: var(--glow-secondary);
+  opacity:1;
 }
 .display-4{
   font-family:Playfair Display, serif;
@@ -179,6 +248,7 @@ h2{
   color: #B68C55;
   font-size: 50px;
   padding-bottom:20px;
+  margin-top: 20px;
 }
 
 p{
@@ -190,10 +260,18 @@ p{
 .fas{
   color:#0a0a0a;
 }
-
-.card{
-  background-color: #0a0a0a;
+.card { /*sa may contact us*/
+  background-color: var(--color-card);
+  border-color: var(--bs-border-color);
+  transition: all 0.3s ease;
 }
+
+.card:hover {
+  border-color: rgba(166, 138, 92, 0.5);
+  box-shadow: var(--glow-secondary);
+}
+
+
 .card-title{
   font-family:Cormorant, sans-serif ;
   font-size: large;
@@ -208,32 +286,84 @@ p{
   padding-left: 5px;
 
 }
-.card-body{
+
+.card-body{ /*products*/
   color:#f5e8c4;
   background-color: #101010;
   border-color: #252525;
+  background-color: var(--color-card);
+  border-color: var(--bs-border-color);
+  transition: all 0.3s ease;
+  position: relative;
+  min-height: 200px;
+  padding-bottom: 50px;
+  border-radius: 5px;
+
+}
+.card-body:hover{
+  border-color: rgba(166, 138, 92, 0.5);
+  box-shadow: var(--glow-secondary);
 }
 #card-icon{
   color:#B68C55;
 
 }
-#cardbtn{
+#cardbtn{/*button ng mga products*/
   background-color:#B68C55;
   color:#151414;
   border-color:#b18141;
-  font-weight: bold;
   font-family: Lora, sans-serif;
-  font-size: medium;
-  width:1vw;
+  background: var(--gradient-primary);
+  border: none;
+  color: var(--bs-dark);
+  font-weight: 600;
+  transition: all 0.3s ease;
+  position: absolute;
+  bottom: 10px;
+  padding: 10px 20px;
+  left:1%;
+  transform:translateY(-1%);
+  margin-left: 50px;
 }
 
-.btn{
+#cardbtn:hover{
+  box-shadow: var(--glow-primary);
+  transform: translateY(-2px);
+  color: var(--bs-dark);
+  opacity: 0.9;
+}
+
+.btn-primary{ /*search,send msg*/
   background-color:#B68C55;
   color:#151414;
   border-color:#b18141;
   font-weight: bold;
   font-family: Lora, sans-serif;
-  font-size: medium;
+  background: var(--gradient-primary);
+  border: none;
+  color: var(--bs-dark);
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  box-shadow: var(--glow-primary);
+  transform: translateY(-2px);
+  color: var(--bs-dark);
+  opacity: 0.9;
+}
+.btn{ /*shoppingcartbtn*/
+  background-color:#B68C55;
+  color:#151414;
+  border-color:#b18141;
+  font-weight: bold;
+  font-family: Lora, sans-serif;
+}
+.btn:hover{
+  box-shadow: var(--glow-primary);
+  transform: translateY(-2px);
+  color: var(--bs-dark);
+  opacity: 0.9;
 }
 
 /*product-html*/
@@ -249,13 +379,17 @@ p{
 }
 #prod-info{
   color:#f5e8c4;
-  font-size: 5px ;
+  font-size:smaller;
   font-family: Inter, sans-serif;
+  display: flex;
+  justify-content: space-between;
+  gap:5px;
+
 }
 #prod-price{
   color:#B68C55;
   margin-left:250px;
-  font-size: 5rem;
+  font-size: 300px;
 }
 .form-control{
   background-color: #252525;
