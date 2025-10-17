@@ -154,3 +154,18 @@ $(function () {
     // },
   })
 });
+
+// === Logout function ===
+$("#logoutBtn").on("click", function () {
+  $.ajax({
+    url: "./misc/logout_handler.php",
+    method: "POST",
+    dataType: "json"
+  }).done(function (res) {
+    alert(res.message || "Logged out successfully");
+    location.reload();
+  }).fail(function () {
+    alert("Logout failed — try again.");
+  });
+});
+

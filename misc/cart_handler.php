@@ -199,8 +199,10 @@
 ?>
 
 <?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 include "database.php";
-session_start();
 
 /* ================================================================
    CART HANDLER (Clean & Organized)

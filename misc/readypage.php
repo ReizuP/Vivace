@@ -5,53 +5,67 @@ if (session_status() === PHP_SESSION_NONE) {
 
 function navbar()
 {
-  
+    $isLoggedIn = isset($_SESSION['username']);
+    $username = $isLoggedIn ? htmlspecialchars($_SESSION['username']) : '';
 
-$html = <<<HTML
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-      <a class="navbar-brand" href="index.php" id="brand-name">
-        <i class="fas fa-store" id="navstore-icon"></i> VIVACE
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <form class="d-flex" action="search.php" method="GET">
+    $html = <<<HTML
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+          <a class="navbar-brand" href="index.php" id="brand-name">
+            <i class="fas fa-store" id="navstore-icon">VIVACE</i>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <form class="d-flex" action="search.php" method="GET">
             <input class="form-control me-2" id="search" type="search" name="search_query" placeholder="Search products..." aria-label="Search">
             <button class="btn btn-outline-light" type="submit">Search</button>
-        </form>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index.php">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="products.php">Products</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="about.php">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.php">Contact</a>
-          </li>
-          <li class="nav-item">
-            <button class="nav-link btn btn-link text-white" id="loginBtn">
-              <i class="fas fa-sign-in-alt">Login</i>
-            </button>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="cart.php">
-              <i class="fas fa-shopping-cart" id="navbar-cart">Cart</i>
-              <span class="badge bg-primary" id="cart-count">0</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-HTML;
-    echo $html;
+          </form>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="products.php">Products</a></li>
+              <li class="nav-item"><a class="nav-link" href="about.php">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>
+    HTML;
+
+    if ($isLoggedIn) {
+        $html .= <<<HTML
+              <li class="nav-item">
+                <span class="nav-link">Welcome, {$username}</span>
+              </li>
+              <li class="nav-item">
+                <button class="nav-link btn btn-link text-white" id="logoutBtn">
+                  <i class="fas fa-sign-out-alt">Logout</i>
+                </button>
+              </li>
+    HTML;
+    } else {
+        $html .= <<<HTML
+              <li class="nav-item">
+                <button class="nav-link btn btn-link text-white" id="loginBtn">
+                  <i class="fas fa-sign-in-alt">Login</i>
+                </button>
+              </li>
+    HTML;
+    }
+
+    $html .= <<<HTML
+              <li class="nav-item">
+                <a class="nav-link" href="cart.php">
+                  <i class="fas fa-shopping-cart" id="navbar-cart">Cart</i>
+                  <span class="badge bg-primary" id="cart-count">0</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    HTML;
+
+        echo $html;
 }
+
 
 
 function footer()

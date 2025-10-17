@@ -65,7 +65,7 @@
 .modal-box h2 {
   margin-bottom: 1rem;
   font-size: 1.8rem;
-  color:#B68C55
+  color: #B68C55;
 }
 
 .modal-box form {
@@ -73,7 +73,7 @@
   flex-direction: column;
   gap: 0.6rem;
   margin-top: 0.5rem;
-
+  
 }
 
 .modal-box input {
@@ -137,8 +137,8 @@ label.error {
 }
 
 input.error {
-  border: 2px solid #e63946 ;
-  background-color:linear-gradient(180deg, rgba(10, 10, 10, 0.6), #1a1a1a);  
+  border: 2px solid #e63946;
+  background-color: linear-gradient(180deg, rgba(10, 10, 10, 0.6), #1a1a1a); /* very light red background */
 }
 
 body {
@@ -162,8 +162,6 @@ body {
   color: var(--bs-primary) !important;
 }
 
-
-
 .nav-link{
   color: var(--color-muted-foreground) !important;
   font-weight: 500;
@@ -179,6 +177,7 @@ body {
 #navstore-icon{
   color:#B68C55;
 }
+
 #navstore-icon:hover {
   animation: glow 2s ease-in-out infinite;
 }
@@ -194,23 +193,24 @@ body {
   color:#B68C55;
 }
 #display-home{
-  font-family:Playfair Display, serif;
+  font-family: Playfair Display, serif;
   font-weight: bold;
   color:#B68C55;
   font-size:60px;
 }
+
 #display-home:hover{
   border-color: rgba(166, 138, 92, 0.5);
   text-shadow: var(--glow-secondary);
   opacity:1;
 }
 .display-4{
-  font-family:Playfair Display, serif;
+  font-family: Playfair Display, serif;
   font-weight: bold;
   color:#B68C55;
 }
 .display-5{
-  font-family:Playfair Display, serif;
+  font-family: Playfair Display, serif;
   color:#B68C55;
   font-weight: bold;
 }
@@ -244,7 +244,7 @@ body {
 }
 
 h2{
-  font-family:Playfair Display, serif;
+  font-family: Playfair Display, serif;
   color: #B68C55;
   font-size: 50px;
   padding-bottom:20px;
@@ -252,7 +252,7 @@ h2{
 }
 
 p{
-  font-family:Lora, sans-serif ;
+  font-family: Lora, sans-serif;
   font-size: 14px;
 
 }
@@ -260,6 +260,7 @@ p{
 .fas{
   color:#0a0a0a;
 }
+
 .card { /*sa may contact us*/
   background-color: var(--color-card);
   border-color: var(--bs-border-color);
@@ -270,8 +271,6 @@ p{
   border-color: rgba(166, 138, 92, 0.5);
   box-shadow: var(--glow-secondary);
 }
-
-
 .card-title{
   font-family:Cormorant, sans-serif ;
   font-size: large;
@@ -286,7 +285,6 @@ p{
   padding-left: 5px;
 
 }
-
 .card-body{ /*products*/
   color:#f5e8c4;
   background-color: #101010;
@@ -379,12 +377,11 @@ p{
 }
 #prod-info{
   color:#f5e8c4;
-  font-size:smaller;
+  font-size: smaller ;
   font-family: Inter, sans-serif;
   display: flex;
   justify-content: space-between;
   gap:5px;
-
 }
 #prod-price{
   color:#B68C55;

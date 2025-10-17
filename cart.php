@@ -77,7 +77,7 @@ include "misc/cart_handler.php";
   </nav> -->
 
   <!-- PAGE HEADER -->
-  <div class="bg-primary text-white py-4">
+  <div class="bg-secondary text-white py-4">
     <div class="container">
       <h1 class="display-5">Shopping Cart</h1>
       <p class="lead">Review your items before checkout</p>

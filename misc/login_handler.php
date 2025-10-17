@@ -1,36 +1,37 @@
 <?php
-session_start();
-include __DIR__ . "/database.php";
-header('Content-Type: application/json');
-
-if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    echo json_encode(['success' => false, 'message' => 'Invalid request']);
-    exit;
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
 }
+include "database.php"; // adjust path if needed
 
-$login = trim($_POST['username'] ?? ''); // accepts username or email
+// Get the AJAX form data
+$email = $_POST['email'] ?? '';
 $password = $_POST['password'] ?? '';
 
-if ($login === '' || $password === '') {
-    echo json_encode(['success' => false, 'message' => 'Fill in all fields']);
-    exit;
-}
+// Sanitize
+$email = mysqli_real_escape_string($conn, $email);
+$password = mysqli_real_escape_string($conn, $password);
 
-// try to find user by username or email
-$stmt = $conn->prepare("SELECT id, `user`, pass FROM users WHERE `user` = ? OR email = ? LIMIT 1");
-$stmt->bind_param("ss", $login, $login);
-$stmt->execute();
-$res = $stmt->get_result();
+// Find user by email
+$query = "SELECT * FROM users WHERE email = '$email' LIMIT 1";
+$result = mysqli_query($conn, $query);
 
-if ($row = $res->fetch_assoc()) {
-    if (password_verify($password, $row['pass'])) {
-        $_SESSION['user_id'] = $row['id'];
-        $_SESSION['username'] = $row['user'];
-        echo json_encode(['success' => true, 'message' => 'Login successful']);
+if (mysqli_num_rows($result) > 0) {
+    $user = mysqli_fetch_assoc($result);
+
+    // Check password (assuming it's hashed)
+    if (password_verify($password, $user['pass'])) {
+
+        // ✅ SET SESSION VARIABLES
+        $_SESSION['user_id'] = $user['id'];
+        $_SESSION['username'] = $user['user'];
+        $_SESSION['email'] = $user['email'];
+
+        echo json_encode(["success" => true, "message" => "Login successful"]);
     } else {
-        echo json_encode(['success' => false, 'message' => 'Incorrect password']);
+        echo json_encode(["success" => false, "message" => "Incorrect password"]);
     }
 } else {
-    echo json_encode(['success' => false, 'message' => 'Account not found']);
+    echo json_encode(["success" => false, "message" => "No account found with that email"]);
 }
 ?>
