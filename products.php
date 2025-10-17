@@ -15,10 +15,19 @@ session_start();
   <link href="./styles.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js">
   <!-- Your custom styles -->
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+  <?php if (isset($_SESSION['cart_success'])): ?>
+      <div class="alert alert-success alert-dismissible fade show position-fixed top-0 end-0 m-3 shadow" role="alert" style="z-index: 9999;">
+          <?= $_SESSION['cart_success']; ?>
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+      <?php unset($_SESSION['cart_success']); ?>
+  <?php endif; ?>
 
   <!-- NAVBAR -->
     <?php
@@ -175,6 +184,7 @@ session_start();
 
   <!-- Your custom modal script -->
   <script src="./js/modals.js"></script>
+  <script src="./js/cart.js"></script>
   <script src="./js/loginsign.js"></script>
 </body>
 </html>

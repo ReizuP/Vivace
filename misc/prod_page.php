@@ -1,79 +1,42 @@
 <?php
-include "database.php";
-
-
-function prodDetails ()
-{
+function prodDetails() {
     global $conn;
-    $id = isset($_GET['id']) ? (int) $_GET['id'] : 0;
-    
-    $query = "SELECT * FROM products WHERE id = {$id}";
+    $id = isset($_GET['id']) ? intval($_GET['id']) : 0;
+
+    $query = "SELECT * FROM products WHERE id = $id LIMIT 1";
     $result = mysqli_query($conn, $query);
-    $product = mysqli_fetch_assoc($result);
 
-    $prodID = $product['id'];
-    $prodName = $product['prod_name'];
-    $prodImg = $product['img'];
-    $prodPrice = number_format($product['price'], 2, '.', '');
-    $prodStock = $product['stock'];
-    $prodInfo = $product['info'];
-
-
-    $htmlYes = <<<HTML
-        <div class="row">
-                <!-- Images -->
-                <div class="col-md-6">
-                    <img src="img/$prodImg"
-                        alt="$prodName"
-                        class="product-img-main mb-3">
-                </div>
-
-                <!-- Info -->
-                <div class="col-md-6">
-                    <h1>$prodName</h1>
-                    <p class="fs-4 fw-bold text-success">$$prodPrice</p>
-                    <p class="text-muted">Stock: $prodStock</p>
-                    <p>$prodInfo</p>
-
-                    <div class="d-flex gap-3 mt-3">
-                        <a href="cart.php?action=add&id=$prodID"
-                            class="btn btn-primary btn-lg">Add to Cart</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Reviews -->
-            <div class="mt-5">
-                <h3>Customer Reviews</h3>
-                <div class="card my-3">
-                    <div class="card-body">
-                        <h5 class="card-title">John Doe</h5>
-                        <p class="card-text">⭐⭐⭐⭐⭐</p>
-                        <p class="card-text">Excellent quality! Very satisfied with my purchase.</p>
-                    </div>
-                </div>
-                <div class="card my-3">
-                    <div class="card-body">
-                        <h5 class="card-title">Jane Smith</h5>
-                        <p class="card-text">⭐⭐⭐⭐</p>
-                        <p class="card-text">Great value for money. Would recommend!</p>
-                    </div>
-                </div>
-            </div>
-    HTML;
-
-    $htmlNo = <<<HTML
-        <div class="alert alert-danger text-center">Product not found.</div>
-    HTML;
-
-    if ($product)
-    {
-        return $htmlYes;
+    if (!$result || mysqli_num_rows($result) === 0) {
+        return "<div class='alert alert-danger'>Product not found.</div>";
     }
-    else
-    {
-        return $htmlNo;
-    }
+
+    $row = mysqli_fetch_assoc($result);
+    $img = htmlspecialchars($row['img']);
+    $prod_name = htmlspecialchars($row['prod_name']);
+    $price = number_format($row['price'], 2);
+    $stock = (int)$row['stock'];
+    $info = htmlspecialchars($row['info']);
+
+    $inStock = $stock > 0 ? "<span class='text-success'>In Stock</span>" : "<span class='text-danger'>Out of Stock</span>";
+
+    return <<<HTML
+    <div class="row">
+        <div class="col-md-6">
+            <img src="img/{$img}" class="product-img-main rounded shadow-sm mb-3" alt="{$prod_name}">
+        </div>
+        <div class="col-md-6">
+            <h2>{$prod_name}</h2>
+            <p class="fs-4 text-primary mb-1">₱{$price}</p>
+            <p class="mb-3">{$inStock}</p>
+            <p>{$info}</p>
+            <div class="d-flex align-items-center gap-2 mt-3">
+                <a href="misc/cart_handler.php?action=add&id={$row['id']}" class="btn btn-success">
+                    <i class="fas fa-cart-plus">Add to Cart</i>
+                </a>
+                <a href="products.php" class="btn btn-outline-secondary">Back to Products</a>
+            </div>
+        </div>
+    </div>
+    HTML;
 }
-
 ?>

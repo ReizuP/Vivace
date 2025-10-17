@@ -12,6 +12,7 @@ include "misc/prod_page.php";
 // $sql = "SELECT id, prod_name, price, stock, info FROM products WHERE id = $id LIMIT 1";
 // $result = mysqli_query($conn, $sql);
 // $product = mysqli_fetch_assoc($result);
+
 ?>
 
 <!DOCTYPE html>
@@ -24,6 +25,7 @@ include "misc/prod_page.php";
     <link href="./styles.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js">
     <!-- Your custom styles -->
     <link rel="stylesheet" href="styles.css">
     <style>

@@ -15,6 +15,7 @@ include "misc/cart_handler.php";
   <link href="./styles.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js">
   <!-- Your custom styles -->
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -192,6 +193,7 @@ include "misc/cart_handler.php";
 
   <!-- Your custom modal script -->
   <script src="./js/modals.js?v=2"></script>
+  <script src="./js/cart.js"></script>
   <script src="./js/loginsign.js"></script>
 
 </body>

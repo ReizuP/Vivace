@@ -252,6 +252,9 @@ if (isset($_GET['action']) && $_GET['action'] === 'add' && isset($_GET['id'])) {
     } else {
         echo "<script>alert('Product not found.'); window.location='products.php';</script>";
     }
+    $_SESSION['cart_success'] = "✅ Product added to cart!";
+    header("Location: ../cart.php");
+    exit();
 }
 
 
@@ -395,4 +398,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['update_cart'])) {
     echo json_encode(["success" => true, "subtotal" => number_format($subtotal, 2)]);
     exit;
 }
+
+
 ?>
