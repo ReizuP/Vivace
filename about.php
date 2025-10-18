@@ -59,7 +59,7 @@ if (session_status() === PHP_SESSION_NONE) {
   </nav> -->
 
   <!-- PAGE HEADER -->
-  <div class="bg-primary text-white py-5">
+  <div class="bg-secondary text-white py-5">
     <div class="container">
       <h1 class="display-4">About VIVACE</h1>
       <p class="lead">Your trusted online shopping destination since 2020</p>

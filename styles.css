@@ -1,5 +1,168 @@
 @import "./node_modules/bootstrap/dist/css/bootstrap.min.css";
 
+#products-grid .card,
+.container .card,
+.card {
+    display: flex !important;
+    flex-direction: column !important;
+    height: 350px !important; /* Fixed equal height for all cards */
+    width: 100% !important; /* Full width of container */
+    border-radius: 16px !important; /* More curved corners like Shopee */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important; /* Subtle shadow */
+    transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+    border: none !important;
+    background-color: #1a1a1a !important; /* Dark background */
+    overflow: hidden !important; /* Clean edges */
+    margin: 0 !important; /* Remove auto margin for grid alignment */
+    position: relative !important; /* For absolute positioning of button */
+}
+
+/* Make the card-body fill the card properly with equal height */
+.card-body {
+    display: flex !important;
+    flex-direction: column !important;
+    flex-grow: 1 !important; /* Fill remaining space */
+    padding: 12px !important; /* Better padding */
+    justify-content: flex-start !important; /* Start from top */
+    height: 100% !important; /* Fill card height */
+    min-height: 140px !important; /* Ensure minimum height for consistency */
+    position: relative !important; /* For absolute button positioning */
+    padding-bottom: 60px !important; /* Space for button */
+}
+
+/* Hover effect for cards */
+.card:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Make card images consistent and properly sized */
+.card img,
+.card .img-zoom-limit {
+    border-radius: 16px 16px 0 0 !important; /* Match card border radius */
+    height: 180px !important; /* Fixed height for consistency */
+    object-fit: cover !important; /* Maintain aspect ratio */
+    width: 100% !important;
+    flex-shrink: 0 !important; /* Don't shrink image */
+    display: block !important; /* Ensure image is displayed */
+    background-color: #f8f8f8 !important; /* Light background if image fails to load */
+    opacity: 1 !important; /* Ensure image is visible */
+    visibility: visible !important; /* Make sure image is visible */
+    z-index: 1 !important; /* Ensure image is on top */
+    position: relative !important; /* Ensure proper positioning */
+}
+
+/* Content area styling */
+.card-content {
+    flex-grow: 1 !important; /* Take up available space */
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+}
+
+/* Text styling for equal cards */
+.card-body h5 {
+    font-size: 1rem !important; /* Larger, more prominent title */
+    font-weight: 700 !important; /* Bold title */
+    line-height: 1.2 !important;
+    margin-bottom: 6px !important;
+    flex-shrink: 0 !important; /* Don't shrink title */
+    color: #f5f5f5 !important; /* Bright white for visibility */
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important; /* Subtle shadow for pop */
+}
+
+.card-body p {
+    font-size: 0.8rem !important; /* Readable description */
+    line-height: 1.3 !important;
+    margin-bottom: 4px !important;
+    flex-grow: 1 !important; /* Allow description to expand */
+    overflow: hidden !important; /* Hide overflow */
+    text-overflow: ellipsis !important; /* Add ellipsis for long text */
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2 !important; /* Limit to 2 lines */
+    line-clamp: 2 !important; /* Standard property for compatibility */
+    -webkit-box-orient: vertical !important;
+}
+
+/* Button styling for equal cards - perfectly aligned at bottom */
+.card-body .btn {
+    font-size: 0.8rem !important; /* Readable button text */
+    padding: 8px 16px !important; /* Better button padding */
+    border-radius: 8px !important; /* Rounded button */
+    width: calc(100% - 24px) !important; /* Full width minus padding */
+    text-align: center !important; /* Center button text */
+    position: absolute !important; /* Absolute positioning */
+    bottom: 12px !important; /* Fixed distance from bottom */
+    left: 12px !important; /* Fixed distance from left */
+    right: 12px !important; /* Fixed distance from right */
+    margin: 0 !important; /* Remove all margins */
+}
+
+/* Grid layout for equal cards */
+.row.g-4 {
+    gap: 1rem !important; /* Smaller gap to prevent overflow */
+    align-items: stretch !important; /* Equal height cards */
+    margin: 0 auto !important; /* Center the row */
+    max-width: 100% !important; /* Prevent overflow */
+}
+
+/* Ensure columns are equal width and contained */
+.col-md-4 {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    max-width: 100% !important; /* Prevent column overflow */
+    overflow: hidden !important; /* Hide any overflow */
+}
+
+
+/* Responsive grid for equal, centered cards - prevent overflow */
+@media (min-width: 1200px) {
+    .col-md-4 {
+        flex: 0 0 23% !important; /* 4 cards per row on large screens */
+        max-width: 23% !important;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .col-md-4 {
+        flex: 0 0 31% !important; /* 3 cards per row on medium screens */
+        max-width: 31% !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .col-md-4 {
+        flex: 0 0 48% !important; /* 2 cards per row on small-medium screens */
+        max-width: 48% !important;
+    }
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+    .card {
+        height: 300px !important; /* Slightly smaller on mobile */
+        max-width: 100% !important;
+    }
+    
+    .card img {
+        height: 160px !important; /* Smaller image on mobile */
+    }
+    
+    .card-body {
+        padding: 10px !important; /* Better padding on mobile */
+        padding-bottom: 60px !important; /* Space for button */
+    }
+    
+    .col-md-4 {
+        flex: 0 0 48% !important; /* 2 cards per row on mobile */
+        max-width: 48% !important;
+    }
+    
+    .row.g-4 {
+        gap: 0.5rem !important; /* Smaller gap on mobile */
+    }
+}
 
 :root {
   /* Piano-inspired color palette */
@@ -42,7 +205,7 @@
   height: 100%;
   background: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(5px);
-  display: none; /* hidden by default */
+  display: none;
   align-items: center;
   justify-content: center;
   z-index: 1000;
@@ -267,15 +430,35 @@ p{
   transition: all 0.3s ease;
 }
 
+/* Override for product cards specifically */
+#products-grid .card,
+.container .card {
+  background-color: #1a1a1a !important;
+  border-color: transparent !important;
+  border-radius: 12px !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+  max-width: 280px !important;
+  margin: 0 auto !important;
+}
+
 .card:hover {
   border-color: rgba(166, 138, 92, 0.5);
   box-shadow: var(--glow-secondary);
 }
+
+/* Override hover for product cards */
+#products-grid .card:hover,
+.container .card:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+  border-color: transparent !important;
+}
 .card-title{
   font-family:Cormorant, sans-serif ;
-  font-size: large;
-  color:#eaeae8;
-  font-weight: bold;
+  font-size: 1.1rem !important; /* Larger title */
+  color:#f5f5f5 !important; /* Bright white */
+  font-weight: 700 !important; /* Extra bold */
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important; /* Subtle shadow for pop */
 }
 .card-text{
   font-family: Lora , sans-serif;
@@ -293,10 +476,14 @@ p{
   border-color: var(--bs-border-color);
   transition: all 0.3s ease;
   position: relative;
-  min-height: 200px;
-  padding-bottom: 50px;
-  border-radius: 5px;
-
+  min-height: 140px !important; /* Ensure minimum height for consistency */
+  padding: 12px !important; /* Better padding for equal cards */
+  padding-bottom: 60px !important; /* Space for absolute positioned button */
+  border-radius: 0 0 16px 16px !important; /* Match card border radius */
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-start !important; /* Start from top */
+  height: 100% !important; /* Fill remaining card space */
 }
 .card-body:hover{
   border-color: rgba(166, 138, 92, 0.5);
@@ -316,12 +503,18 @@ p{
   color: var(--bs-dark);
   font-weight: 600;
   transition: all 0.3s ease;
-  position: absolute;
-  bottom: 10px;
-  padding: 10px 20px;
-  left:1%;
-  transform:translateY(-1%);
-  margin-left: 50px;
+  position: absolute !important; /* Absolute positioning for perfect alignment */
+  bottom: 12px !important; /* Fixed distance from bottom */
+  left: 12px !important; /* Fixed distance from left */
+  right: 12px !important; /* Fixed distance from right */
+  padding: 8px 16px !important; /* Better padding */
+  transform: none !important;
+  margin: 0 !important; /* Remove margins */
+  width: calc(100% - 24px) !important; /* Full width minus padding */
+  border-radius: 8px !important; /* Rounded button */
+  font-size: 0.8rem !important; /* Readable text */
+  text-align: center !important; /* Center button text */
+  flex-shrink: 0 !important; /* Don't shrink button */
 }
 
 #cardbtn:hover{

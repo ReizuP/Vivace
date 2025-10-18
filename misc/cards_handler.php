@@ -33,16 +33,18 @@ global $total_amount_products, $conn;
 
             echo "<div class=\"col-md-4 mb-4\">
                 <div class=\"card h-100 shadow-sm\">
-                    <!-- Placeholder product image -->
                     <img src=\"img/{$img}\"
                         class=\"img-zoom-limit\"
-                        alt=\"{$prod_name}\">
+                        alt=\"{$prod_name}\"
+                        onerror=\"this.src='img/placeholder.png'; this.alt='Image not available';\">
 
                     <div class=\"card-body d-flex flex-column\">
-                        <h5 class=\"fw-bold fs-3\">{$prod_name}</h5>
-                        <p class=\"fs-5 text-truncate\">{$info}</p>
-                        <p class=\"fw-bold fs-5\">\${$price}</p>
-                        <p class=\"text-muted fs-6\">Stock:{$stock}</p>
+                        <div class=\"flex-grow-1\">
+                            <h5 class=\"fw-bold fs-3\">{$prod_name}</h5>
+                            <p class=\"fs-5 text-truncate\">{$info}</p>
+                            <p class=\"fw-bold fs-5\">\${$price}</p>
+                            <p class=\"text-muted fs-6\">Stock:{$stock}</p>
+                        </div>
                         <a href=\"product.php?id={$id}\" class=\" btn btn-primary w-100 mt-2\">View Details</a>
                     </div>
                 </div>
@@ -55,7 +57,7 @@ global $total_amount_products, $conn;
 function featuredProducts()
 {
     global $conn;
-    $query = "SELECT * FROM products ORDER BY RAND() LIMIT 3";
+    $query = "SELECT * FROM products ORDER BY RAND() LIMIT 4";
     $result = mysqli_query($conn, $query);
 
     echo "<div class=\"container\">";

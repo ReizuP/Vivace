@@ -120,6 +120,15 @@ include "misc/cart_handler.php";
             </div>
           </div>
         </div>
+        <div class="col-md-4 text-center">
+          <div class="card h-100 border-0">
+            <div class="card-body">
+              <i class="fas fa-guitar fa-3x text-primary mb-3"></i>
+              <h5 class="card-title">Quality Instruments</h5>
+              <p class="card-text">Highest Quality of Instruments and Tools</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
