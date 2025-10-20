@@ -325,7 +325,7 @@ function showCart()
         $subtotal += $price * $amount;
 
         echo <<<HTML
-        <div class="card mb-3" data-id="{$row['prod_id']}">
+        <!-- <div class="card mb-3" data-id="{$row['prod_id']}">
             <div class="row g-0">
                 <div class="col-md-2">
                     <img src="img/{$img}" class="img-fluid rounded-start" alt="{$prod_name}">
@@ -353,10 +353,65 @@ function showCart()
                     </div>
                 </div>
             </div>
+        </div> -->
+        <!-- <div class="card mb-3">
+          <div class="row g-0">
+            <div class="col-md-2">
+              <img src="img/${img}" class="img-fluid rounded-start" alt="${prod_name}">
+            </div>
+            <div class="col-md-6">
+                <div class="card-body">
+                    <h5 class="card-title">${prod_name}</h5>
+                    <p class="card-text text-muted">Quantity: ${amount}</p>
+                    <p class="card-text"><strong>₱${price}</strong></p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card-body d-flex align-items-center justify-content-between">
+                    <div class="input-group" style="width: 120px;">
+                        <button class="btn btn-outline-secondary" type="button">-</button>
+                        <input type="number" class="form-control text-center" value="${amount}" min="1">
+                        <button class="btn btn-outline-secondary" type="button">+</button>
+                    </div>
+                </div>
+                <form method="post" action="cart.php">
+                    <input type="hidden" name="cart_item" value="{$prod_name}">
+                    <button class="btn btn-outline-danger" type="submit">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </form>
+            </div>
         </div>
-        HTML;
+        </div> -->
+        <div class="cart-card p-3">
+      <div class="row g-3 align-items-center">
+        <div class="col-md-2 text-center">
+          <img src="img/{$img}" alt="{$prod_name}" class="img-fluid rounded">
+        </div>
+        <div class="col-md-5">
+          <h5 class="mb-1">{$prod_name}</h5>
+          <p class="mb-1 text-muted">Quantity: {$amount}</p>
+          <p class="mb-0"><strong>₱{$price}</strong></p>
+        </div>
+        <div class="col-md-3 d-flex justify-content-center">
+          <div class="input-group input-group-sm" style="width: 120px;">
+            <button class="btn btn-outline-secondary" type="button">-</button>
+            <input type="number" class="form-control text-center" value="{$amount}" min="1">
+            <button class="btn btn-outline-secondary" type="button">+</button>
+          </div>
+        </div>
+        <div class="col-md-2 text-center">
+          <form method="post" action="cart.php">
+            <input type="hidden" name="cart_item" value="{$prod_name}">
+            <button class="btn btn-outline-danger btn-sm" type="submit">
+              <i class="fas fa-trash"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    HTML;
     }
-
     showCartTotal($subtotal);
 }
 

@@ -1,8 +1,7 @@
 @import "./node_modules/bootstrap/dist/css/bootstrap.min.css";
 
 #products-grid .card,
-.container .card,
-.card {
+.container .card {
     display: flex !important;
     flex-direction: column !important;
     height: 350px !important; /* Fixed equal height for all cards */
@@ -608,3 +607,4 @@ p{
   color:#f5e8c4;
   border-color: #b18141;
 }
+
