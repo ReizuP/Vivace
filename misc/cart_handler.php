@@ -431,6 +431,46 @@ function showCartTotal($subtotal)
     HTML;
 }
 
+function showOrderSummary()
+{
+    global $subtotal;
+    $formattedTotal = number_format($subtotal, 2);
+    echo <<<HTML
+    <div class="col-lg-4">
+        <div class="card">
+          <div class="card-header">
+            <h5 class="mb-0"id="contact-header">Order Summary</h5>
+          </div>
+          <div class="card-body">
+            <div class="d-flex justify-content-between mb-2">
+              <span>Subtotal:</span>
+              <span id="subtotal">₱{$formattedTotal}</span>
+            </div>
+            <div class="d-flex justify-content-between mb-2">
+              <span>Shipping:</span>
+              <span id="shipping">₱0.00</span>
+            </div>
+            <div class="d-flex justify-content-between mb-2">
+              <span>Tax:</span>
+              <span id="tax">₱0.00</span>
+            </div>
+            <hr>
+            <div class="d-flex justify-content-between mb-3">
+              <strong>Total:</strong>
+              <strong id="total">₱{$formattedTotal}</strong>
+            </div>
+            <button class="btn btn-success w-100 mb-2" id="checkout-btn" disabled>
+              <i class="fas fa-credit-card"></i> Proceed to Checkout
+            </button>
+            <a href="products.php" class="btn btn-outline-primary w-100">
+              <i class="fas fa-arrow-left"></i> Continue Shopping
+            </a>
+          </div>
+        </div>
+      </div>
+    HTML;
+}
+
 
 // -------------------- UPDATE CART (AJAX) --------------------
 if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['update_cart'])) {

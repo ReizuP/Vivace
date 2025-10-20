@@ -103,7 +103,8 @@ include "misc/cart_handler.php";
           </a>
         </div> -->
       </div>
-      <div class="col-lg-4">
+      <?php showOrderSummary(); ?>
+      <!-- <div class="col-lg-4">
         <div class="card">
           <div class="card-header">
             <h5 class="mb-0"id="contact-header">Order Summary</h5>
@@ -134,7 +135,7 @@ include "misc/cart_handler.php";
             </a>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 
