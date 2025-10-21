@@ -608,3 +608,177 @@ p{
   border-color: #b18141;
 }
 
+/* CONTACT PAGE SPECIFIC STYLING - Clean modern layout */
+.contact-page {
+  background-color: #252525 !important;
+  min-height: 100vh !important;
+}
+
+.contact-page .container {
+  max-width: 1200px !important;
+  padding: 2rem 1rem !important;
+}
+
+/* Contact form section - clean and modern */
+.contact-form-section {
+  background-color: #2a2a2a !important;
+  padding: 2rem !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+  margin-bottom: 2rem !important;
+  width: 100% !important;
+  min-height: 500px !important;
+}
+
+.contact-section-title {
+  color: #B68C55 !important;
+  font-size: 1.5rem !important;
+  font-weight: 600 !important;
+  margin-bottom: 1.5rem !important;
+  font-family: 'Playfair Display', serif !important;
+}
+
+/* Contact info section - clean and organized */
+.contact-info-section {
+  background-color: #2a2a2a !important;
+  padding: 2rem !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+  margin-bottom: 1.5rem !important;
+  width: 100% !important;
+}
+
+.follow-us-section {
+  background-color: #2a2a2a !important;
+  padding: 2rem !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+  width: 100% !important;
+}
+
+/* Contact info items */
+.contact-info-item {
+  display: flex !important;
+  align-items: flex-start !important;
+  margin-bottom: 1.5rem !important;
+  padding: 0 !important;
+}
+
+.contact-icon {
+  color: #B68C55 !important;
+  font-size: 1.2rem !important;
+  margin-right: 1rem !important;
+  margin-top: 0.2rem !important;
+  flex-shrink: 0 !important;
+}
+
+.contact-details {
+  color: #f5f5f5 !important;
+  line-height: 1.6 !important;
+}
+
+.contact-details strong {
+  color: #f5f5f5 !important;
+  font-weight: 600 !important;
+}
+
+/* Form styling */
+.contact-page .form-control {
+  background-color: #3a3a3a !important;
+  border: 2px solid #555 !important;
+  color: #f5f5f5 !important;
+  border-radius: 8px !important;
+  padding: 0.75rem 1rem !important;
+  font-size: 1rem !important;
+  transition: border-color 0.3s ease !important;
+}
+
+.contact-page .form-control:focus {
+  background-color: #3a3a3a !important;
+  border-color: #B68C55 !important;
+  box-shadow: 0 0 0 0.2rem rgba(182, 140, 85, 0.25) !important;
+  color: #f5f5f5 !important;
+}
+
+.contact-page .form-label {
+  color: #f5f5f5 !important;
+  font-weight: 600 !important;
+  margin-bottom: 0.5rem !important;
+  font-size: 0.95rem !important;
+}
+
+/* Button styling */
+.contact-page .btn-primary {
+  background: linear-gradient(135deg, #B68C55, #8a7249) !important;
+  border: none !important;
+  color: #2a2a2a !important;
+  padding: 0.75rem 2rem !important;
+  border-radius: 8px !important;
+  font-weight: 600 !important;
+  font-size: 1rem !important;
+  transition: all 0.3s ease !important;
+}
+
+.contact-page .btn-primary:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 12px rgba(182, 140, 85, 0.4) !important;
+  background: linear-gradient(135deg, #a68a5c, #8a7249) !important;
+}
+
+/* Social media buttons */
+.contact-page .btn-outline-primary {
+  border: 2px solid #3b5998 !important;
+  color: #3b5998 !important;
+  background-color: transparent !important;
+  margin: 0.25rem !important;
+  border-radius: 8px !important;
+  padding: 0.5rem 1rem !important;
+  font-weight: 500 !important;
+}
+
+.contact-page .btn-outline-info {
+  border: 2px solid #1da1f2 !important;
+  color: #1da1f2 !important;
+  background-color: transparent !important;
+  margin: 0.25rem !important;
+  border-radius: 8px !important;
+  padding: 0.5rem 1rem !important;
+  font-weight: 500 !important;
+}
+
+.contact-page .btn-outline-danger {
+  border: 2px solid #e1306c !important;
+  color: #e1306c !important;
+  background-color: transparent !important;
+  margin: 0.25rem !important;
+  border-radius: 8px !important;
+  padding: 0.5rem 1rem !important;
+  font-weight: 500 !important;
+}
+
+.contact-page .btn-outline-primary:hover {
+  background-color: #3b5998 !important;
+  color: #ffffff !important;
+  border-color: #3b5998 !important;
+}
+
+.contact-page .btn-outline-info:hover {
+  background-color: #1da1f2 !important;
+  color: #ffffff !important;
+  border-color: #1da1f2 !important;
+}
+
+.contact-page .btn-outline-danger:hover {
+  background-color: #e1306c !important;
+  color: #ffffff !important;
+  border-color: #e1306c !important;
+}
+
+/* Social buttons container */
+.social-buttons {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 0.5rem !important;
+}
+
+
