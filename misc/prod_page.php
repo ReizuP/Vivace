@@ -22,7 +22,7 @@ function prodDetails() {
     return <<<HTML
     <div class="row">
         <div class="col-md-6">
-            <img src="img/{$img}" class="product-img-main rounded shadow-sm mb-3" alt="{$prod_name}">
+            <img src="img/products/{$img}" class="product-img-main rounded shadow-sm mb-3" alt="{$prod_name}">
         </div>
         <div class="col-md-6">
             <h2>{$prod_name}</h2>

@@ -386,7 +386,7 @@ function showCart()
         <div class="cart-card p-3">
       <div class="row g-3 align-items-center">
         <div class="col-md-2 text-center">
-          <img src="img/{$img}" alt="{$prod_name}" class="img-fluid rounded">
+          <img src="img/products/{$img}" alt="{$prod_name}" class="img-fluid rounded">
         </div>
         <div class="col-md-5">
           <h5 class="mb-1">{$prod_name}</h5>

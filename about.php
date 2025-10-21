@@ -76,7 +76,7 @@ if (session_status() === PHP_SESSION_NONE) {
         <p>We believe in the power of technology to make shopping more convenient, accessible, and enjoyable for everyone.</p>
       </div>
       <div class="col-lg-6">
-        <img src="https://picsum.photos/500/300?office" class="img-fluid rounded" id="aboutpic"alt="Our Office">
+        <img src="https://picsum.photos/500/300?office" class="img-fluid rounded" id="aboutpic" alt="Our Office">
       </div>
     </div>
 

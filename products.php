@@ -21,14 +21,6 @@ session_start();
 </head>
 <body>
 
-  <?php if (isset($_SESSION['cart_success'])): ?>
-      <div class="alert alert-success alert-dismissible fade show position-fixed top-0 end-0 m-3 shadow" role="alert" style="z-index: 9999;">
-          <?= $_SESSION['cart_success']; ?>
-          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-      </div>
-      <?php unset($_SESSION['cart_success']); ?>
-  <?php endif; ?>
-
   <!-- NAVBAR -->
     <?php
       include "misc/readypage.php";

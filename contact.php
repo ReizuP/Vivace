@@ -182,7 +182,7 @@
   <script src="node_modules/jquery-validation/dist/jquery.validate.min.js"></script>
 
   <!-- Your custom modal script -->
-  <script src="./modals.js"></script>
+  <script src="./js/modals.js"></script>
   <script src="./js/loginsign.js"></script>
 </body>
 </html>
