@@ -25,7 +25,7 @@ function search()
                 <div class="col-md-4 mb-4">
                     <div class="card h-100 shadow-sm">
                         <!-- Placeholder product image -->
-                        <img src="img/{$img}"
+                        <img src="img/products/{$img}"
                             class="img-zoom-limit"
                             alt="{$prod_name}">
 
@@ -47,4 +47,8 @@ function search()
         echo "<h2 class=\"alert alert-warning text-center\">No results found for '{$search}'</h2>";
         echo "<h2>";
     }
+}
+
+if (isset($_GET['search_query'])) {
+    search();
 }

@@ -27,46 +27,9 @@ include "misc/cart_handler.php";
 
       navbar();
       ?>
-  <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-      <a class="navbar-brand" href="index.php">
-        <i class="fas fa-store"></i> E-Shop
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link active" href="index.php">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="products.php">Products</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="about.php">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.php">Contact</a>
-          </li>
-          <li class="nav-item">
-            <button class="nav-link btn btn-link text-white" id="loginBtn">
-              <i class="fas fa-sign-in-alt">Login</i>
-            </button>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="cart.php">
-              <i class="fas fa-shopping-cart">Cart</i>
-              <span class="badge bg-primary" id="cart-count">0</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav> -->
 
   <!-- HERO -->
-  <header class="text-center text-white py-5 bg-dark" style="background:url(img/bannernotext.png) center/cover no-repeat;">
+  <header class="text-center text-white py-5 bg-dark" style="background:url(img/assets/bannernotext.png) center/cover no-repeat;">
     <div class="container">
       <h1 class="display-4" id="display-home">VIVACE</h1>
       <p class="lead">Discover premium instruments for your business and hobbies</p>
@@ -139,25 +102,6 @@ include "misc/cart_handler.php";
       footer();
       modals();
       ?>
-  <!-- <footer class="bg-dark text-white text-center py-4">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <h5>E-Shop</h5>
-          <p>Your trusted online shopping destination</p>
-        </div>
-        <div class="col-md-6">
-          <h5>Follow Us</h5>
-          <a href="#" class="text-white me-3"><i class="fab fa-facebook"></i></a>
-          <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
-          <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
-        </div>
-      </div>
-      <hr>
-      <p class="mb-0">&copy; 2025 E-Shop | Designed for demo purposes</p>
-    </div>
-  </footer> -->
-
   <!-- Login Modal -->
   <!-- <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
     <div class="modal-dialog">

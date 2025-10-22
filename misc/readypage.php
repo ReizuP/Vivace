@@ -73,9 +73,25 @@ function footer()
 {
 
 $html = <<<HTML
-    <footer class="footer bg-dark text-white text-center py-3">
-        <p class="mb-0">© 2025 VIVACE | Designed for demo purposes</p>
-    </footer>
+    <footer class="bg-dark text-white text-center py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h5>VIVACE</h5>
+          <p>Your trusted online shopping destination</p>
+        </div>
+        <div class="col-md-6">
+          <h5>Follow Us</h5>
+          <a href="#" class="text-white me-3"><i class="fab fa-facebook"></i></a>
+          <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <hr>
+      <p class="mb-0">&copy; 2025 VIVACE | Designed for demo purposes</p>
+    </div>
+  </footer>
+
 HTML;
     echo $html;
 }

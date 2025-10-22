@@ -33,7 +33,7 @@ global $total_amount_products, $conn;
 
             echo "<div class=\"col-md-4 mb-4\">
                 <div class=\"card h-100 shadow-sm\">
-                    <img src=\"img/{$img}\"
+                    <img src=\"img/products/{$img}\"
                         class=\"img-zoom-limit\"
                         alt=\"{$prod_name}\"
                         onerror=\"this.src='img/placeholder.png'; this.alt='Image not available';\">
