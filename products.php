@@ -29,11 +29,12 @@ session_start();
       ?>
   
   <!-- PAGE HEADER -->
-   <br>
+  <header class="text-center text-white py-5 bg-dark hero-banner" style="background:url('img/assets/bannernotext.png') center/cover no-repeat; width:100%; background-size:cover;">
     <div class="container">
       <h1 class="display-5">Our Products</h1>
       <p class="lead">Discover our amazing collection of products</p>
     </div>
+  </header>
 
   <!-- FILTERS -->
   <div class="container py-4">

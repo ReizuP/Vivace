@@ -3,7 +3,7 @@
 
 
 // $sql6 = "SELECT COUNT(*) as total from cart";
-// $result2 = mysqli_query($conn, $sql6);
+// $result2 = mysqli_query($connect, $sql6);
 // $row2 =  mysqli_fetch_assoc($result2);
 // $total_cart_num = $row2['total'];
 
@@ -12,22 +12,22 @@
 //     $user_id = $_SESSION['user_id'] ?? 0;
 
 //     $query = "SELECT * FROM products WHERE id = $id LIMIT 1";
-//     $result = mysqli_query($conn, $query);
+//     $result = mysqli_query($connect, $query);
 
 //     if ($row = mysqli_fetch_assoc($result)) {
 //         $prod_name = $row['prod_name'];
 //         $price = $row['price'];
 
 //         $checkQuery = "SELECT * FROM cart WHERE prod_name = '$prod_name' AND user_id = $user_id LIMIT 1";
-//         $checkResult = mysqli_query($conn, $checkQuery);
+//         $checkResult = mysqli_query($connect, $checkQuery);
 
 //         if (mysqli_num_rows($checkResult) > 0) {
 //             $updateQuery = "UPDATE cart SET quantity = quantity + 1 WHERE prod_name = '$prod_name' AND user_id = $user_id";
-//             mysqli_query($conn, $updateQuery);
+//             mysqli_query($connect, $updateQuery);
 //         } else {
 //             $insertQuery = "INSERT INTO cart (user_id, prod_name, quantity, price)
 //                             VALUES ($user_id, '$prod_name', 1, '$price')";
-//             mysqli_query($conn, $insertQuery);
+//             mysqli_query($connect, $insertQuery);
 //         }
 
 //         echo "<script>alert('{$prod_name} added to cart!');</script>";
@@ -41,7 +41,7 @@
 //     $cart_item = filter_input(INPUT_POST, 'cart_item', FILTER_SANITIZE_SPECIAL_CHARS);
 
 //     $delete_query = "DELETE FROM cart WHERE prod_name = '$cart_item' LIMIT 1";
-//     if (mysqli_query($conn, $delete_query)) {
+//     if (mysqli_query($connect, $delete_query)) {
 //         echo "<script>alert('{$cart_item} removed from cart!');</script>";
 //         // Optional: refresh the page to update the cart
 //         echo "<script>window.location.href = 'cart.php';</script>";
@@ -55,7 +55,7 @@
 //     #$checkout = filter_input(INPUT_POST, 'checkout', FILTER_SANITIZE_SPECIAL_CHARS);
 //     $checkout = true;
 //     $query = "TRUNCATE TABLE cart";
-//     if (mysqli_query($conn, $query) && $checkout) {
+//     if (mysqli_query($connect, $query) && $checkout) {
 //         echo "<script>alert(\"Thank you for shopping with us!\")</script>";
 //     } else {
 //         echo "<script>Something went wrong!</script>";
@@ -79,9 +79,9 @@
 
 // function getCartCount()
 // {
-//     global $conn;
+//     global $connect;
 //     $query = "SELECT COUNT(*) AS counted FROM cart";
-//     $result = mysqli_query($conn, $query);
+//     $result = mysqli_query($connect, $query);
 //     $row = mysqli_fetch_assoc($result);
 //     return (int)$row['counted'];
 // }
@@ -90,13 +90,13 @@
 
 // function showCart()
 // {
-//     global $conn;
+//     global $connect;
 
 //     $user_id = $_SESSION['user_id'] ?? 0;
 //     // $query = "SELECT * FROM cart WHERE user_id = $user_id";
 
 //     $count = "SELECT COUNT(*) as counted FROM cart;";
-//     $countres = mysqli_query($conn, $count);
+//     $countres = mysqli_query($connect, $count);
 //     $countrow = mysqli_fetch_assoc($countres);
 //     $counted = getCartCount();
 
@@ -124,7 +124,7 @@
 //                 JOIN products ON cart.prod_name = products.prod_name
 //                 ";
 
-//         $result = mysqli_query($conn, $query);
+//         $result = mysqli_query($connect, $query);
         
 //             while ($row = mysqli_fetch_assoc($result)) {
 //             $prod_name = $row['prod_name'];
@@ -175,22 +175,22 @@
 
 // # --- Update cart quantity (AJAX) ---
 // if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['update_cart'])) {
-//     $prod_name = mysqli_real_escape_string($conn, $_POST['prod_name']);
+//     $prod_name = mysqli_real_escape_string($connect, $_POST['prod_name']);
 //     $quantity = intval($_POST['quantity']);
 
 //     if ($quantity <= 0) {
 //         // If quantity becomes 0 or less, delete the item
 //         $delete_query = "DELETE FROM cart WHERE prod_name = '$prod_name' LIMIT 1";
-//         mysqli_query($conn, $delete_query);
+//         mysqli_query($connect, $delete_query);
 //     } else {
 //         // Otherwise, update quantity
 //         $update_query = "UPDATE cart SET quantity = $quantity WHERE prod_name = '$prod_name'";
-//         mysqli_query($conn, $update_query);
+//         mysqli_query($connect, $update_query);
 //     }
 
 //     // Return the updated subtotal
 //     $subtotal_query = "SELECT SUM(price * quantity) AS subtotal FROM cart";
-//     $res = mysqli_query($conn, $subtotal_query);
+//     $res = mysqli_query($connect, $subtotal_query);
 //     $subtotal = mysqli_fetch_assoc($res)['subtotal'] ?? 0;
 
 //     echo json_encode(["success" => true, "subtotal" => number_format($subtotal, 2)]);
@@ -213,9 +213,9 @@ include "database.php";
 // -------------------- CART COUNT --------------------
 function getCartCount()
 {
-    global $conn;
+    global $connect;
     $query = "SELECT COUNT(*) AS counted FROM cart";
-    $result = mysqli_query($conn, $query);
+    $result = mysqli_query($connect, $query);
     $row = mysqli_fetch_assoc($result);
     return (int)$row['counted'];
 }
@@ -227,25 +227,25 @@ if (isset($_GET['action']) && $_GET['action'] === 'add' && isset($_GET['id'])) {
 
     // Fetch product info
     $query = "SELECT * FROM products WHERE id = $id LIMIT 1";
-    $result = mysqli_query($conn, $query);
+    $result = mysqli_query($connect, $query);
 
     if ($row = mysqli_fetch_assoc($result)) {
-        $prod_name = mysqli_real_escape_string($conn, $row['prod_name']);
+        $prod_name = mysqli_real_escape_string($connect, $row['prod_name']);
         $price = $row['price'];
 
         // Check if already in cart
         $checkQuery = "SELECT * FROM cart WHERE prod_name = '$prod_name' AND user_id = $user_id LIMIT 1";
-        $checkResult = mysqli_query($conn, $checkQuery);
+        $checkResult = mysqli_query($connect, $checkQuery);
 
         if (mysqli_num_rows($checkResult) > 0) {
             $updateQuery = "UPDATE cart 
                             SET quantity = quantity + 1 
                             WHERE prod_name = '$prod_name' AND user_id = $user_id";
-            mysqli_query($conn, $updateQuery);
+            mysqli_query($connect, $updateQuery);
         } else {
             $insertQuery = "INSERT INTO cart (user_id, prod_name, quantity, price) 
                             VALUES ($user_id, '$prod_name', 1, '$price')";
-            mysqli_query($conn, $insertQuery);
+            mysqli_query($connect, $insertQuery);
         }
 
         echo "<script>alert('{$prod_name} added to cart!');</script>";
@@ -260,11 +260,11 @@ if (isset($_GET['action']) && $_GET['action'] === 'add' && isset($_GET['id'])) {
 
 // -------------------- REMOVE FROM CART --------------------
 if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['cart_item'])) {
-    $cart_item = mysqli_real_escape_string($conn, $_POST['cart_item']);
+    $cart_item = mysqli_real_escape_string($connect, $_POST['cart_item']);
     $user_id = $_SESSION['user_id'] ?? 0;
 
     $delete_query = "DELETE FROM cart WHERE prod_name = '$cart_item' AND user_id = $user_id LIMIT 1";
-    if (mysqli_query($conn, $delete_query)) {
+    if (mysqli_query($connect, $delete_query)) {
         echo "<script>alert('{$cart_item} removed from cart!'); window.location.href = 'cart.php';</script>";
     } else {
         echo "<script>alert('Failed to remove item.');</script>";
@@ -277,7 +277,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['checkout'])) {
     $user_id = $_SESSION['user_id'] ?? 0;
     $query = "DELETE FROM cart WHERE user_id = $user_id";
 
-    if (mysqli_query($conn, $query)) {
+    if (mysqli_query($connect, $query)) {
         echo "<script>alert('Thank you for shopping with us!'); window.location.href = 'products.php';</script>";
     } else {
         echo "<script>alert('Something went wrong!');</script>";
@@ -288,7 +288,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['checkout'])) {
 // -------------------- DISPLAY CART --------------------
 function showCart()
 {
-    global $conn;
+    global $connect;
 
     $user_id = $_SESSION['user_id'] ?? 0;
     $counted = getCartCount();
@@ -314,7 +314,7 @@ function showCart()
               JOIN products ON cart.prod_name = products.prod_name
               WHERE cart.user_id = $user_id";
 
-    $result = mysqli_query($conn, $query);
+    $result = mysqli_query($connect, $query);
     $subtotal = 0;
 
     while ($row = mysqli_fetch_assoc($result)) {
@@ -474,20 +474,20 @@ function showOrderSummary()
 
 // -------------------- UPDATE CART (AJAX) --------------------
 if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['update_cart'])) {
-    $prod_name = mysqli_real_escape_string($conn, $_POST['prod_name']);
+    $prod_name = mysqli_real_escape_string($connect, $_POST['prod_name']);
     $quantity = intval($_POST['quantity']);
     $user_id = $_SESSION['user_id'] ?? 0;
 
     if ($quantity <= 0) {
         $delete_query = "DELETE FROM cart WHERE prod_name = '$prod_name' AND user_id = $user_id LIMIT 1";
-        mysqli_query($conn, $delete_query);
+        mysqli_query($connect, $delete_query);
     } else {
         $update_query = "UPDATE cart SET quantity = $quantity WHERE prod_name = '$prod_name' AND user_id = $user_id";
-        mysqli_query($conn, $update_query);
+        mysqli_query($connect, $update_query);
     }
 
     $subtotal_query = "SELECT SUM(price * quantity) AS subtotal FROM cart WHERE user_id = $user_id";
-    $res = mysqli_query($conn, $subtotal_query);
+    $res = mysqli_query($connect, $subtotal_query);
     $subtotal = mysqli_fetch_assoc($res)['subtotal'] ?? 0;
 
     echo json_encode(["success" => true, "subtotal" => number_format($subtotal, 2)]);

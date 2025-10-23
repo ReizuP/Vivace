@@ -1,3 +1,12 @@
+/* Consistent hero/banner style for all pages */
+.hero-banner {
+  min-height: 220px !important;
+  width: 100% !important;
+  background-size: cover !important;
+  background-position: center !important;
+  display: flex;
+  align-items: center;
+}
 @import "./node_modules/bootstrap/dist/css/bootstrap.min.css";
 
 #products-grid .card,

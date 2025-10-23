@@ -68,12 +68,16 @@ $result = mysqli_query($conn, $sql);
     </nav> -->
 
 
-    <!-- SEARCH RESULTS -->
+    <!-- PAGE HEADER -->
+    <header class="text-center text-white py-5 bg-dark hero-banner" style="background:url('img/assets/bannernotext.png') center/cover no-repeat; width:100%; background-size:cover;">
+            <div class="container">
+                <?php
+                        $search = $_GET['search_query'];
+                        echo "<h2 class=\"mb-4\">Search Results for \"{$search}\"</h2>";
+                ?>
+            </div>
+        </header>
     <div class="container my-5">
-        <?php
-            $search = $_GET['search_query'];
-            echo "<h2 class=\"mb-4\">Search Results for \"{$search}\"</h2>";
-        ?>
         <div class="row">
             <?php
                 include "misc/search_handler.php";

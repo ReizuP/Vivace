@@ -52,11 +52,11 @@
   </nav> -->
 
   <!-- HERO -->
-  <header class="text-center text-white py-5 bg-dark" style="background:url('https://picsum.photos/1200/400?business') center/cover no-repeat;">
+  <header class="text-center text-white py-5 bg-dark hero-banner" style="background:url('img/assets/bannernotext.png') center/cover no-repeat; width:100%; background-size:cover;">
     <div class="container">
       <h1 class="display-4">Welcome to VIVACE</h1>
       <p class="lead">Discover premium instruments for your business and lifestyle</p>
-      <a href="products.html" class="btn btn-primary btn-lg mt-3">
+      <a href="products.php" class="btn btn-primary btn-lg mt-3">
         <i class="fas fa-shopping-bag"></i> Shop Now
       </a>
     </div>

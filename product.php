@@ -78,12 +78,18 @@ include "misc/prod_page.php";
         </div>
     </nav> -->
 
-    <!-- PRODUCT DETAIL -->
-    <div class="container my-5">
-        <?php
-        echo prodDetails();
-        ?>
-    </div>
+        <!-- PAGE HEADER -->
+    <header class="text-center text-white py-5 bg-dark hero-banner" style="background:url('img/assets/bannernotext.png') center/cover no-repeat; width:100%; background-size:cover;">
+            <div class="container">
+                <h1 class="display-4">Product Details</h1>
+            </div>
+        </header>
+        <!-- PRODUCT DETAIL -->
+        <div class="container my-5">
+                <?php
+                echo prodDetails();
+                ?>
+        </div>
     <!-- LOGIN MODAL -->
     <!-- <div id="loginModal" class="modal-overlay">
         <div class="modal-box">

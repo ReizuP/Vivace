@@ -59,12 +59,12 @@ if (session_status() === PHP_SESSION_NONE) {
   </nav> -->
 
   <!-- PAGE HEADER -->
-  <div class="bg-secondary text-white py-5">
+  <header class="text-center text-white py-5 bg-dark hero-banner" style="background:url('img/assets/bannernotext.png') center/cover no-repeat; width:100%; background-size:cover;">
     <div class="container">
       <h1 class="display-4">About VIVACE</h1>
       <p class="lead">Your trusted online shopping destination since 2020</p>
     </div>
-  </div>
+  </header>
 
   <!-- ABOUT CONTENT -->
   <div class="container py-5">

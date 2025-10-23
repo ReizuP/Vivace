@@ -52,12 +52,12 @@
   </nav> -->
 
   <!-- PAGE HEADER -->
-  <div class="bg-secondary text-white py-5">
-  <div class="container">
-    <h1 class="display-4">Contact VIVACE</h1>
-    <p class="lead">We'd love to hear from you. Send us a message!</p>
-  </div>
-</div>
+  <header class="text-center text-white py-5 bg-dark hero-banner" style="background:url('img/assets/bannernotext.png') center/cover no-repeat; width:100%; background-size:cover;">
+    <div class="container">
+      <h1 class="display-4">Contact VIVACE</h1>
+      <p class="lead">We'd love to hear from you. Send us a message!</p>
+    </div>
+  </header>
 
   <!-- CONTACT CONTENT -->
   <div class="container py-5 contact-page">
